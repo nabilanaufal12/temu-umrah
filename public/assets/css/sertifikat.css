@@ -1,0 +1,795 @@
+/* ==========================================================================
+   TEMU UMRAH - MODERN DIGITAL CERTIFICATE STYLES (WF7)
+   AgroPulse Design System: 24px Curved Cards, Zero Raw Emojis, A4 Landscape
+   ========================================================================== */
+
+.cert-page-wrapper {
+  background-color: var(--bg-surface-alt, #f8fafc);
+  min-height: calc(100vh - 80px);
+  padding: 7.5rem 0 5rem 0;
+}
+
+/* ==================== HEADER STRIP ==================== */
+.cert-header-strip {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  gap: 1.5rem;
+  margin-bottom: 2rem;
+  flex-wrap: wrap;
+}
+
+.cert-header-left {
+  max-width: 720px;
+}
+
+.cert-eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  background-color: #e0f2fe;
+  color: #0369a1;
+  border: 1px solid #bae6fd;
+  padding: 0.35rem 0.85rem;
+  border-radius: 9999px;
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  margin-bottom: 0.75rem;
+}
+
+.cert-pulse-dot {
+  width: 8px;
+  height: 8px;
+  background-color: #0284c7;
+  border-radius: 50%;
+  box-shadow: 0 0 0 3px rgba(2, 132, 199, 0.3);
+  animation: certPulse 2s infinite ease-in-out;
+}
+
+@keyframes certPulse {
+  0% { transform: scale(0.95); box-shadow: 0 0 0 0 rgba(2, 132, 199, 0.5); }
+  70% { transform: scale(1); box-shadow: 0 0 0 6px rgba(2, 132, 199, 0); }
+  100% { transform: scale(0.95); box-shadow: 0 0 0 0 rgba(2, 132, 199, 0); }
+}
+
+.cert-page-title {
+  font-family: 'Plus Jakarta Sans', 'Manrope', system-ui, sans-serif !important;
+  font-size: 2.15rem;
+  font-weight: 800;
+  color: #0f172a;
+  letter-spacing: -0.03em;
+  margin: 0 0 0.5rem 0;
+  line-height: 1.2;
+}
+
+.cert-page-desc {
+  font-size: 0.95rem;
+  color: #64748b;
+  margin: 0;
+  line-height: 1.6;
+}
+
+/* Certificate Switcher Dropdown */
+.cert-header-switcher {
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+}
+
+.switcher-label {
+  font-size: 0.75rem;
+  font-weight: 700;
+  color: #64748b;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.switcher-select-wrap {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.switcher-icon {
+  position: absolute;
+  left: 0.85rem;
+  color: #003E6D;
+  pointer-events: none;
+}
+
+.switcher-select {
+  appearance: none;
+  background-color: #ffffff;
+  border: 1px solid #cbd5e1;
+  border-radius: 12px;
+  padding: 0.6rem 2.25rem 0.6rem 2.25rem;
+  font-size: 0.85rem;
+  font-weight: 700;
+  color: #0f172a;
+  cursor: pointer;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.03);
+  transition: all 0.2s ease;
+  min-width: 270px;
+}
+
+.switcher-select:focus {
+  outline: none;
+  border-color: #003E6D;
+  box-shadow: 0 0 0 3px rgba(0, 62, 109, 0.15);
+}
+
+/* ==================== ZOOM & MODE TOOLBAR ==================== */
+.cert-toolbar {
+  background-color: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 18px;
+  padding: 0.85rem 1.5rem;
+  margin-bottom: 1.75rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.02);
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.zoom-controls {
+  display: flex;
+  align-items: center;
+  gap: 0.65rem;
+}
+
+.zoom-label {
+  font-size: 0.82rem;
+  font-weight: 700;
+  color: #64748b;
+}
+
+.zoom-btn {
+  background-color: #f1f5f9;
+  border: 1px solid #cbd5e1;
+  border-radius: 8px;
+  width: 32px;
+  height: 32px;
+  font-size: 1.1rem;
+  font-weight: 800;
+  cursor: pointer;
+  color: #0f172a;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.15s ease;
+}
+
+.zoom-btn:hover {
+  background-color: #003E6D;
+  color: #ffffff;
+  border-color: #003E6D;
+}
+
+.zoom-level-text {
+  font-size: 0.85rem;
+  font-weight: 800;
+  color: #0f172a;
+  min-width: 48px;
+  text-align: center;
+  font-family: monospace;
+}
+
+.zoom-btn-reset {
+  background-color: transparent;
+  border: 1px solid #cbd5e1;
+  border-radius: 8px;
+  padding: 0.35rem 0.65rem;
+  font-size: 0.75rem;
+  font-weight: 700;
+  color: #475569;
+  cursor: pointer;
+  transition: all 0.15s ease;
+}
+
+.zoom-btn-reset:hover {
+  background-color: #f1f5f9;
+  color: #0f172a;
+}
+
+.cert-mode-badge {
+  font-size: 0.8rem;
+  font-weight: 700;
+  color: #003E6D;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  background-color: #f0f9ff;
+  border: 1px solid #e0f2fe;
+  padding: 0.4rem 0.85rem;
+  border-radius: 10px;
+}
+
+/* ==================== 3-COLUMN INFO STRIP ==================== */
+.certificate-info-strip {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.25rem;
+  margin-bottom: 2rem;
+}
+
+.certificate-info-item {
+  background-color: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 20px;
+  padding: 1.25rem 1.4rem;
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.02);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.certificate-info-item:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.04);
+}
+
+.cert-info-icon {
+  width: 40px;
+  height: 40px;
+  border-radius: 12px;
+  background-color: #e0f2fe;
+  color: #003E6D;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.cert-info-body strong {
+  display: block;
+  font-size: 0.88rem;
+  font-weight: 700;
+  color: #0f172a;
+  margin-bottom: 0.2rem;
+}
+
+.cert-info-body span {
+  display: block;
+  font-size: 0.78rem;
+  color: #64748b;
+  line-height: 1.4;
+}
+
+/* ==================== 2-COLUMN CERTIFICATE LAYOUT ==================== */
+.cert-layout {
+  display: grid;
+  grid-template-columns: 1fr 340px;
+  gap: 2rem;
+  margin-bottom: 4rem;
+  align-items: start;
+}
+
+/* Kolom Kiri: Canvas Viewer Container */
+.cert-viewer-container {
+  background: radial-gradient(circle at center, #1e293b 0%, #0f172a 100%);
+  border-radius: 24px;
+  padding: 2.5rem 1.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 15px 35px rgba(15, 23, 42, 0.15);
+  overflow-x: auto;
+  border: 1px solid #334155;
+}
+
+.cert-canvas-wrapper {
+  transition: transform 0.2s ease-out;
+  transform-origin: top center;
+}
+
+/* A4 Landscape Canvas (297mm x 210mm) */
+.cert-canvas {
+  width: 820px;
+  aspect-ratio: 297 / 210;
+  background-color: #ffffff;
+  border-radius: 4px;
+  box-shadow: 0 20px 45px rgba(0, 0, 0, 0.5);
+  position: relative;
+  padding: 28px 36px;
+  color: #0f172a;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  overflow: hidden;
+  box-sizing: border-box;
+}
+
+/* Double Ornate Border */
+.cert-outer-border {
+  position: absolute;
+  top: 12px;
+  left: 12px;
+  right: 12px;
+  bottom: 12px;
+  border: 3px solid #003E6D;
+  pointer-events: none;
+}
+
+.cert-inner-border {
+  position: absolute;
+  top: 17px;
+  left: 17px;
+  right: 17px;
+  bottom: 17px;
+  border: 1px solid #C5A059;
+  pointer-events: none;
+}
+
+/* 4 Corner Ornaments */
+.corner-decor {
+  position: absolute;
+  width: 22px;
+  height: 22px;
+  border-color: #003E6D;
+  border-style: solid;
+  pointer-events: none;
+}
+.corner-tl { top: 8px; left: 8px; border-width: 3px 0 0 3px; }
+.corner-tr { top: 8px; right: 8px; border-width: 3px 3px 0 0; }
+.corner-bl { bottom: 8px; left: 8px; border-width: 0 0 3px 3px; }
+.corner-br { bottom: 8px; right: 8px; border-width: 0 3px 3px 0; }
+
+/* Watermark */
+.cert-watermark {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 300px;
+  height: 300px;
+  opacity: 0.04;
+  pointer-events: none;
+  z-index: 1;
+}
+
+/* Header Sertifikat */
+.cert-header {
+  position: relative;
+  z-index: 2;
+  text-align: center;
+  border-bottom: 1.5px solid #e2e8f0;
+  padding-bottom: 0.65rem;
+}
+
+.cert-logos-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 0.4rem;
+}
+
+.cert-logo-circle {
+  width: 44px;
+  height: 44px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.cert-faculty-badge {
+  background: linear-gradient(135deg, #003E6D, #0284c7);
+  color: #ffffff;
+  border-radius: 50%;
+  font-size: 0.72rem;
+  font-weight: 800;
+  letter-spacing: 0.05em;
+  box-shadow: 0 2px 6px rgba(0, 62, 109, 0.2);
+}
+
+.cert-univ-name {
+  text-align: center;
+  line-height: 1.25;
+}
+
+.univ-line-1 {
+  display: block;
+  font-size: 0.85rem;
+  font-weight: 800;
+  letter-spacing: 0.06em;
+  color: #003E6D;
+}
+
+.univ-line-2 {
+  display: block;
+  font-size: 0.72rem;
+  font-weight: 700;
+  color: #475569;
+  letter-spacing: 0.04em;
+}
+
+.cert-title-huge {
+  font-family: Georgia, 'Times New Roman', serif;
+  font-size: 1.6rem;
+  font-weight: 800;
+  letter-spacing: 0.12em;
+  color: #003E6D;
+  margin: 0.35rem 0 0.15rem 0;
+}
+
+.cert-serial-num {
+  font-family: monospace;
+  font-size: 0.68rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  color: #64748b;
+}
+
+/* Body Tengah Sertifikat */
+.cert-body-center {
+  position: relative;
+  z-index: 2;
+  text-align: center;
+  padding: 0.65rem 0;
+}
+
+.cert-given-text {
+  font-style: italic;
+  font-size: 0.82rem;
+  color: #64748b;
+  margin: 0 0 0.35rem 0;
+}
+
+.cert-recipient-name {
+  font-family: Georgia, 'Times New Roman', serif;
+  font-size: 1.65rem;
+  font-weight: 800;
+  letter-spacing: 0.06em;
+  color: #003E6D;
+  margin-bottom: 0.15rem;
+  text-decoration: underline;
+  text-decoration-color: #C5A059;
+  text-underline-offset: 6px;
+}
+
+.cert-recipient-meta {
+  font-size: 0.78rem;
+  color: #475569;
+  font-weight: 600;
+  margin: 0.4rem 0 0.65rem 0;
+}
+
+.cert-role-wrap {
+  margin-bottom: 0.65rem;
+}
+
+.cert-role-highlight {
+  display: inline-block;
+  background: linear-gradient(135deg, #fef3c7, #fde68a);
+  color: #92400e;
+  border: 1px solid #fcd34d;
+  padding: 0.25rem 0.85rem;
+  border-radius: 9999px;
+  font-size: 0.72rem;
+  font-weight: 800;
+  letter-spacing: 0.06em;
+}
+
+.cert-event-title {
+  font-size: 1.08rem;
+  font-weight: 800;
+  color: #0f172a;
+  max-width: 650px;
+  margin: 0 auto 0.25rem auto;
+  line-height: 1.35;
+}
+
+.cert-event-date {
+  font-size: 0.75rem;
+  color: #64748b;
+  margin: 0;
+}
+
+/* Footer Tanda Tangan & QR */
+.cert-footer-row {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  padding-top: 0.4rem;
+  border-top: 1px solid #f1f5f9;
+}
+
+.sig-box {
+  text-align: center;
+  width: 200px;
+}
+
+.sig-svg-wrap {
+  height: 38px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 0.25rem;
+}
+
+.sig-svg-image {
+  width: 95px;
+  height: 32px;
+}
+
+.sig-line {
+  display: block;
+  font-size: 0.8rem;
+  font-weight: 800;
+  color: #0f172a;
+  border-top: 1px solid #cbd5e1;
+  padding-top: 0.25rem;
+}
+
+.sig-role {
+  display: block;
+  font-size: 0.66rem;
+  color: #64748b;
+}
+
+.cert-qr-center {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.25rem;
+}
+
+.cert-qr-small {
+  background: #ffffff;
+  padding: 3px;
+  border: 1px solid #cbd5e1;
+  border-radius: 6px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.cert-qr-caption {
+  font-size: 0.62rem;
+  color: #64748b;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
+/* ==================== ACTIONS SIDEBAR ==================== */
+.cert-sidebar-card {
+  background-color: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 24px;
+  padding: 1.75rem;
+  box-shadow: 0 4px 20px -2px rgba(0, 0, 0, 0.04);
+  display: flex;
+  flex-direction: column;
+}
+
+.sidebar-header {
+  margin-bottom: 1.25rem;
+}
+
+.sidebar-title {
+  font-size: 1.2rem;
+  font-weight: 800;
+  color: #0f172a;
+  margin: 0 0 0.35rem 0;
+}
+
+.sidebar-desc {
+  font-size: 0.82rem;
+  color: #64748b;
+  margin: 0;
+  line-height: 1.5;
+}
+
+.cert-actions-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  margin-bottom: 1.5rem;
+}
+
+.btn-action-full {
+  width: 100%;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  padding: 0.85rem 1rem;
+  font-size: 0.88rem;
+  font-weight: 800;
+  border-radius: 12px;
+  transition: all 0.2s ease;
+}
+
+.btn-action-full.btn-primary {
+  background-color: #003E6D;
+  color: #ffffff;
+  border: none;
+  box-shadow: 0 4px 12px rgba(0, 62, 109, 0.2);
+}
+
+.btn-action-full.btn-primary:hover {
+  background-color: #002d50;
+  transform: translateY(-1px);
+  box-shadow: 0 6px 16px rgba(0, 62, 109, 0.28);
+}
+
+.btn-action-full.btn-outline {
+  background-color: #ffffff;
+  border: 1px solid #cbd5e1;
+  color: #334155;
+}
+
+.btn-action-full.btn-outline:hover {
+  background-color: #f8fafc;
+  border-color: #94a3b8;
+  color: #0f172a;
+}
+
+.cert-integrity-box {
+  background-color: #f8fafc;
+  border: 1px solid #e2e8f0;
+  border-radius: 16px;
+  padding: 1rem 1.15rem;
+  margin-bottom: 1.25rem;
+}
+
+.integrity-title-row {
+  display: flex;
+  align-items: center;
+  gap: 0.45rem;
+  font-size: 0.82rem;
+  color: #003E6D;
+  margin-bottom: 0.5rem;
+}
+
+.integrity-points-list {
+  margin: 0;
+  padding-left: 1.25rem;
+  font-size: 0.75rem;
+  color: #64748b;
+  line-height: 1.55;
+}
+
+.btn-linkedin-share {
+  width: 100%;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  background-color: #0A66C2;
+  color: #ffffff;
+  border: none;
+  border-radius: 12px;
+  padding: 0.8rem 1rem;
+  font-size: 0.88rem;
+  font-weight: 700;
+  cursor: pointer;
+  box-shadow: 0 4px 12px rgba(10, 102, 194, 0.2);
+  transition: all 0.2s ease;
+  margin-bottom: 1rem;
+}
+
+.btn-linkedin-share:hover {
+  background-color: #084e96;
+  transform: translateY(-1px);
+  box-shadow: 0 6px 16px rgba(10, 102, 194, 0.28);
+}
+
+.btn-back-events {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.45rem;
+  font-size: 0.82rem;
+  font-weight: 700;
+  color: #64748b;
+  text-decoration: none;
+  padding: 0.6rem;
+  border-radius: 10px;
+  transition: all 0.2s ease;
+}
+
+.btn-back-events:hover {
+  color: #003E6D;
+  background-color: #f1f5f9;
+}
+
+/* Empty State */
+.cert-empty-card {
+  background-color: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 24px;
+  padding: 4rem 2rem;
+  text-align: center;
+  max-width: 620px;
+  margin: 2rem auto;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.03);
+}
+
+.cert-empty-icon {
+  width: 76px;
+  height: 76px;
+  border-radius: 50%;
+  background-color: #f1f5f9;
+  color: #64748b;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 1.5rem auto;
+}
+
+.empty-title {
+  font-size: 1.35rem;
+  font-weight: 800;
+  color: #0f172a;
+  margin: 0 0 0.5rem 0;
+}
+
+.empty-desc {
+  font-size: 0.9rem;
+  color: #64748b;
+  margin: 0 auto 1.75rem auto;
+  line-height: 1.55;
+}
+
+.empty-actions {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+/* ==================== PRINT MEDIA STYLES ==================== */
+@media print {
+  body * {
+    visibility: hidden;
+  }
+  .navbar, .footer-campus-unified, .cert-header-strip, .cert-toolbar,
+  .certificate-info-strip, .cert-sidebar-card, .home-utility-bar {
+    display: none !important;
+  }
+  .cert-viewer-container {
+    background: transparent !important;
+    padding: 0 !important;
+    box-shadow: none !important;
+    border: none !important;
+  }
+  .cert-canvas-wrapper {
+    transform: none !important;
+  }
+  #printableCert, #printableCert * {
+    visibility: visible;
+  }
+  #printableCert {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100vw !important;
+    height: 100vh !important;
+    box-shadow: none !important;
+    border-radius: 0 !important;
+    page-break-after: avoid;
+    page-break-inside: avoid;
+  }
+  @page {
+    size: A4 landscape;
+    margin: 0;
+  }
+}
+
+/* ==================== RESPONSIVE ==================== */
+@media (max-width: 1080px) {
+  .cert-layout {
+    grid-template-columns: 1fr;
+  }
+  .certificate-info-strip {
+    grid-template-columns: 1fr;
+  }
+}

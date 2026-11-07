@@ -1,0 +1,1086 @@
+/* ==========================================================================
+   TEMU UMRAH - SIPA UMRAH THEME (SIDEBAR / MENYAMPING LAYOUT)
+   Theme: Exact Match to SIPA UMRAH (sipa.umrah.ac.id)
+   Colors: Solid UMRAH Blue #006aa7, Active Menu Yellow #ebb11b, Surface #f4f6f9
+   ========================================================================== */
+
+:root {
+  --sipa-blue: #006aa7;
+  --sipa-blue-dark: #005696;
+  --sipa-blue-light: #e8f3fa;
+  --sipa-yellow: #ebb11b;
+  --sipa-yellow-hover: #d99f12;
+  --sipa-bg: #f4f6f9;
+  --sipa-sidebar-w: 240px;
+  --sipa-sidebar-collapsed-w: 64px;
+  --sipa-topbar-h: 56px;
+  --sipa-footer-h: 38px;
+  --sipa-text-dark: #1e293b;
+  --sipa-text-muted: #64748b;
+  --sipa-border: #e2e8f0;
+}
+
+body.sipa-body {
+  margin: 0;
+  padding: 0;
+  background-color: var(--sipa-bg);
+  font-family: 'Plus Jakarta Sans', 'Manrope', system-ui, -apple-system, sans-serif;
+  color: var(--sipa-text-dark);
+  min-height: 100vh;
+}
+
+/* ==========================================================================
+   1. TOPBAR (HEADER ATAS SOLID BIRU)
+   ========================================================================== */
+.sipa-topbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: var(--sipa-topbar-h);
+  background-color: var(--sipa-blue);
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 1.25rem;
+  z-index: 1050;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.12);
+}
+
+.sipa-topbar-left {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.sipa-brand-link {
+  display: flex;
+  align-items: center;
+  gap: 0.65rem;
+  text-decoration: none;
+  color: #ffffff;
+}
+
+.sipa-brand-logo {
+  width: 34px;
+  height: 34px;
+  object-fit: contain;
+  flex-shrink: 0;
+}
+
+.sipa-brand-text {
+  display: flex;
+  flex-direction: column;
+}
+
+.sipa-brand-title {
+  font-size: 0.88rem;
+  font-weight: 800;
+  line-height: 1.15;
+  color: #ffffff;
+  letter-spacing: 0.02em;
+}
+
+.sipa-brand-sub {
+  font-size: 0.68rem;
+  color: rgba(255, 255, 255, 0.82);
+  line-height: 1.15;
+}
+
+.sipa-hamburger-btn {
+  background: transparent;
+  border: none;
+  color: #ffffff;
+  width: 38px;
+  height: 38px;
+  border-radius: 6px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background-color 0.2s ease;
+  margin-left: 0.5rem;
+}
+
+.sipa-hamburger-btn:hover {
+  background-color: rgba(255, 255, 255, 0.15);
+}
+
+.sipa-topbar-right {
+  display: flex;
+  align-items: center;
+  gap: 1.25rem;
+}
+
+.sipa-notif-btn {
+  background: transparent;
+  border: none;
+  color: #ffffff;
+  position: relative;
+  cursor: pointer;
+  padding: 0.4rem;
+  border-radius: 6px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background-color 0.2s ease;
+}
+
+.sipa-notif-btn:hover {
+  background-color: rgba(255, 255, 255, 0.15);
+}
+
+.sipa-notif-badge {
+  position: absolute;
+  top: 4px;
+  right: 4px;
+  width: 7px;
+  height: 7px;
+  background-color: #ef4444;
+  border-radius: 50%;
+  border: 1.5px solid var(--sipa-blue);
+}
+
+/* User Profile Dropdown Component */
+.sipa-user-dropdown-wrap {
+  position: relative;
+}
+
+.sipa-user-chip {
+  display: flex;
+  align-items: center;
+  gap: 0.65rem;
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.16);
+  padding: 0.35rem 0.85rem 0.35rem 0.85rem;
+  border-radius: 999px;
+  cursor: pointer;
+  color: #ffffff;
+  transition: all 0.2s ease;
+  font-family: inherit;
+}
+
+.sipa-user-chip:hover,
+.sipa-user-dropdown-wrap.open .sipa-user-chip {
+  background: rgba(255, 255, 255, 0.18);
+  border-color: rgba(255, 255, 255, 0.35);
+}
+
+.sipa-user-name {
+  font-size: 0.82rem;
+  font-weight: 700;
+  color: #ffffff;
+  letter-spacing: 0.02em;
+}
+
+.sipa-chevron {
+  color: rgba(255, 255, 255, 0.85);
+  transition: transform 0.2s ease;
+  margin-left: 0.15rem;
+}
+
+.sipa-user-dropdown-wrap.open .sipa-chevron {
+  transform: rotate(180deg);
+}
+
+.sipa-user-avatar {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background-color: #dc2626;
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.8rem;
+  font-weight: 800;
+  border: 1.5px solid #ffffff;
+  overflow: hidden;
+  flex-shrink: 0;
+}
+
+.sipa-user-avatar img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* SIPA User Dropdown Menu Card */
+.sipa-user-dropdown-menu {
+  position: absolute;
+  top: calc(100% + 10px);
+  right: 0;
+  width: 275px;
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 0.85rem;
+  box-shadow: 0 12px 28px -4px rgba(0, 0, 0, 0.18), 0 6px 12px -4px rgba(0, 0, 0, 0.08);
+  padding: 0.5rem;
+  z-index: 1060;
+  display: none;
+  animation: sipaDropdownFade 0.18s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.sipa-user-dropdown-wrap.open .sipa-user-dropdown-menu {
+  display: block;
+}
+
+@keyframes sipaDropdownFade {
+  from {
+    opacity: 0;
+    transform: translateY(-8px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.sipa-dropdown-header {
+  padding: 0.75rem 0.85rem 0.6rem;
+  background: #f8fafc;
+  border-radius: 0.6rem;
+  margin-bottom: 0.35rem;
+}
+
+.sipa-dropdown-user-title {
+  font-size: 0.88rem;
+  font-weight: 800;
+  color: #0f172a;
+  line-height: 1.3;
+}
+
+.sipa-dropdown-user-role {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  margin-top: 0.3rem;
+  flex-wrap: wrap;
+}
+
+.sipa-role-badge {
+  font-size: 0.68rem;
+  font-weight: 700;
+  background: #e0f2fe;
+  color: #0284c7;
+  padding: 0.1rem 0.45rem;
+  border-radius: 999px;
+}
+
+.sipa-user-email {
+  font-size: 0.72rem;
+  color: #64748b;
+}
+
+.sipa-dropdown-divider {
+  height: 1px;
+  background: #e2e8f0;
+  margin: 0.35rem 0;
+}
+
+.sipa-dropdown-item {
+  display: flex;
+  align-items: center;
+  gap: 0.65rem;
+  padding: 0.55rem 0.85rem;
+  border-radius: 0.5rem;
+  color: #334155;
+  font-size: 0.82rem;
+  font-weight: 600;
+  text-decoration: none;
+  transition: all 0.15s ease;
+  width: 100%;
+  border: none;
+  background: transparent;
+  cursor: pointer;
+  text-align: left;
+}
+
+.sipa-dropdown-item:hover {
+  background: #f1f5f9;
+  color: #0284c7;
+}
+
+.sipa-dropdown-item svg {
+  color: #64748b;
+  flex-shrink: 0;
+  transition: color 0.15s ease;
+}
+
+.sipa-dropdown-item:hover svg {
+  color: #0284c7;
+}
+
+.sipa-dropdown-danger {
+  color: #dc2626 !important;
+}
+
+.sipa-dropdown-danger svg {
+  color: #dc2626 !important;
+}
+
+.sipa-dropdown-danger:hover {
+  background: #fef2f2 !important;
+  color: #b91c1c !important;
+}
+
+/* Ensure Notification Drawer Sits on Top of SIPA Header and Footer */
+.sipa-body .drawer-backdrop,
+body.sipa-body .drawer-backdrop {
+  z-index: 2000 !important;
+}
+
+.sipa-body .notif-drawer,
+body.sipa-body .notif-drawer {
+  z-index: 2001 !important;
+}
+
+/* ==========================================================================
+   2. SIDEBAR (MENU SAMPING / MENYAMPING)
+   ========================================================================== */
+.sipa-sidebar {
+  position: fixed;
+  top: var(--sipa-topbar-h);
+  left: 0;
+  bottom: var(--sipa-footer-h);
+  width: var(--sipa-sidebar-w);
+  background-color: #ffffff;
+  border-right: 1px solid var(--sipa-border);
+  z-index: 1040;
+  display: flex;
+  flex-direction: column;
+  transition: width 0.25s ease, left 0.25s ease;
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+
+.sipa-sidebar-header {
+  padding: 1.15rem 1.25rem 0.85rem;
+  border-bottom: 1px solid #f1f5f9;
+}
+
+.sipa-sidebar-subtext {
+  font-size: 0.8rem;
+  font-weight: 700;
+  color: var(--sipa-text-dark);
+  margin: 0;
+  white-space: nowrap;
+}
+
+.sipa-menu-list {
+  list-style: none;
+  margin: 0;
+  padding: 0.5rem 0;
+  flex: 1;
+}
+
+.sipa-menu-item {
+  margin: 0;
+  padding: 0;
+}
+
+.sipa-menu-link {
+  display: flex;
+  align-items: center;
+  gap: 0.85rem;
+  padding: 0.85rem 1.25rem;
+  color: #4b5563;
+  text-decoration: none;
+  font-size: 0.84rem;
+  font-weight: 600;
+  transition: all 0.15s ease;
+  white-space: nowrap;
+}
+
+.sipa-menu-link:hover {
+  background-color: #f8fafc;
+  color: #0f172a;
+}
+
+.sipa-menu-icon {
+  width: 18px;
+  height: 18px;
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #64748b;
+}
+
+/* EXACT MATCH SIPA UMRAH: Active Menu is Yellow Solid Block */
+.sipa-menu-link.active,
+.sipa-menu-item.active .sipa-menu-link {
+  background-color: var(--sipa-yellow) !important;
+  color: #000000 !important;
+  font-weight: 700 !important;
+}
+
+.sipa-menu-link.active .sipa-menu-icon,
+.sipa-menu-item.active .sipa-menu-link .sipa-menu-icon {
+  color: #000000 !important;
+}
+
+.sipa-menu-link.active svg,
+.sipa-menu-item.active .sipa-menu-link svg {
+  stroke: #000000 !important;
+}
+
+.sipa-menu-divider {
+  height: 1px;
+  background-color: #f1f5f9;
+  margin: 0.5rem 0;
+}
+
+/* Sidebar Menu Badge (Pending Action Counter) */
+.sipa-menu-badge {
+  margin-left: auto;
+  font-size: 0.68rem;
+  font-weight: 800;
+  padding: 0.12rem 0.5rem;
+  border-radius: 999px;
+  min-width: 18px;
+  text-align: center;
+  line-height: 1.3;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.2s ease;
+}
+
+.sipa-badge-danger {
+  background: #ef4444;
+  color: #ffffff;
+}
+
+.sipa-badge-warning {
+  background: #f59e0b;
+  color: #ffffff;
+}
+
+/* Context-Aware Event Navigation in Sidebar */
+.sipa-sidebar-section-title {
+  padding: 0.75rem 1.25rem 0.35rem;
+  font-size: 0.68rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  color: #94a3b8;
+  letter-spacing: 0.05em;
+}
+
+.sipa-sidebar-active-event-box {
+  margin: 0.35rem 0.85rem 0.75rem;
+  padding: 0.65rem 0.85rem;
+  background: #f0fdf4;
+  border: 1px solid #bbf7d0;
+  border-radius: 0.5rem;
+}
+
+.sipa-sidebar-active-event-name {
+  font-size: 0.78rem;
+  font-weight: 800;
+  color: #166534;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  line-height: 1.35;
+}
+
+.sipa-sidebar-btn-back {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.65rem 1.25rem;
+  font-size: 0.78rem;
+  font-weight: 700;
+  color: #0284c7;
+  text-decoration: none;
+  background: #f0f9ff;
+  border-bottom: 1px solid #e0f2fe;
+  transition: all 0.15s ease;
+}
+
+.sipa-sidebar-btn-back:hover {
+  background: #e0f2fe;
+  color: #0369a1;
+}
+
+/* ==========================================================================
+   3. MAIN CONTENT CONTAINER (SEBELAH KANAN SIDEBAR)
+   ========================================================================== */
+.sipa-main-wrapper {
+  margin-top: var(--sipa-topbar-h);
+  margin-left: var(--sipa-sidebar-w);
+  margin-bottom: var(--sipa-footer-h);
+  min-height: calc(100vh - var(--sipa-topbar-h) - var(--sipa-footer-h));
+  background-color: var(--sipa-bg);
+  padding: 1.25rem 2rem 3rem;
+  box-sizing: border-box;
+  transition: margin-left 0.25s ease;
+}
+
+/* Simple Clean Breadcrumb matching SIPA Screenshot */
+.sipa-breadcrumb {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.82rem;
+  color: #64748b;
+  margin-bottom: 1.25rem;
+}
+
+.sipa-breadcrumb a {
+  color: var(--sipa-blue);
+  text-decoration: none;
+  font-weight: 700;
+}
+
+.sipa-breadcrumb a:hover {
+  text-decoration: underline;
+}
+
+.sipa-breadcrumb-sep {
+  color: #94a3b8;
+  font-weight: 400;
+}
+
+.sipa-breadcrumb-current {
+  color: #475569;
+  font-weight: 600;
+}
+
+/* Content Container Card (White box like in SIPA Screenshot) */
+.sipa-card {
+  background: #ffffff;
+  border-radius: 8px;
+  border: 1px solid var(--sipa-border);
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+  padding: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
+/* Reset Page Wrappers inside SIPA layout */
+.sipa-main-wrapper .panitia-main-container,
+.sipa-main-wrapper .peserta-wrapper,
+.sipa-main-wrapper .terbit-wrapper {
+  padding-top: 0 !important;
+  padding-bottom: 0 !important;
+  background: transparent !important;
+  min-height: auto !important;
+}
+
+/* ==========================================================================
+   4. FOOTER (BARIS BIRU SOLID DI BAWAH)
+   ========================================================================== */
+.sipa-footer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: var(--sipa-footer-h);
+  background-color: var(--sipa-blue);
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 1.25rem;
+  font-size: 0.78rem;
+  z-index: 1050;
+}
+
+.sipa-footer-collapse-btn {
+  display: none !important;
+}
+
+.sipa-footer-collapse-btn:hover {
+  background: rgba(0, 0, 0, 0.3);
+}
+
+.sipa-footer-copy {
+  margin: 0;
+  color: #ffffff;
+  font-size: 0.76rem;
+  letter-spacing: 0.01em;
+}
+
+/* ==========================================================================
+   5. COLLAPSED & RESPONSIVE STATES
+   ========================================================================== */
+body.sipa-collapsed .sipa-sidebar {
+  width: var(--sipa-sidebar-collapsed-w) !important;
+}
+
+/* Hide header subtext and full header area in collapsed mode */
+body.sipa-collapsed .sipa-sidebar-header {
+  display: none !important;
+}
+
+/* Back button in collapsed mode: clean centered icon only */
+body.sipa-collapsed .sipa-sidebar-btn-back {
+  justify-content: center !important;
+  padding: 0.85rem 0 !important;
+  gap: 0 !important;
+  border-bottom: 1px solid #e2e8f0 !important;
+}
+
+body.sipa-collapsed .sipa-sidebar-btn-back span {
+  display: none !important;
+}
+
+body.sipa-collapsed .sipa-sidebar-btn-back svg {
+  margin: 0 !important;
+  width: 18px !important;
+  height: 18px !important;
+}
+
+/* Hide section titles, active event box, and sidebar footer in collapsed mode */
+body.sipa-collapsed .sipa-sidebar-section-title,
+body.sipa-collapsed .sipa-sidebar-active-event-box,
+body.sipa-collapsed .sipa-sidebar-footer {
+  display: none !important;
+}
+
+/* Menu items in collapsed mode: perfectly centered icons */
+body.sipa-collapsed .sipa-menu-list {
+  padding: 0.4rem 0 !important;
+}
+
+body.sipa-collapsed .sipa-menu-link {
+  position: relative !important;
+  justify-content: center !important;
+  padding: 0.85rem 0 !important;
+  gap: 0 !important;
+  text-align: center !important;
+}
+
+body.sipa-collapsed .sipa-menu-text {
+  display: none !important;
+}
+
+/* Position badge as subtle floating dot/pill on collapsed icon */
+body.sipa-collapsed .sipa-menu-badge {
+  position: absolute !important;
+  top: 6px !important;
+  right: 12px !important;
+  margin-left: 0 !important;
+  font-size: 0.6rem !important;
+  font-weight: 800 !important;
+  padding: 0.1rem 0.35rem !important;
+  min-width: 16px !important;
+  border-radius: 999px !important;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.25) !important;
+  line-height: 1.2 !important;
+  z-index: 2 !important;
+}
+
+/* Hide any stray span elements in collapsed mode */
+body.sipa-collapsed .sipa-menu-link > span:not(.sipa-menu-icon):not(.sipa-menu-badge) {
+  display: none !important;
+}
+
+body.sipa-collapsed .sipa-menu-icon {
+  margin: 0 !important;
+  width: 20px !important;
+  height: 20px !important;
+}
+
+body.sipa-collapsed .sipa-menu-divider {
+  margin: 0.5rem 0.65rem !important;
+}
+
+/* Hide any non-menu-item text li like empty notices in collapsed mode */
+body.sipa-collapsed .sipa-sidebar li:not(.sipa-menu-item) {
+  display: none !important;
+}
+
+body.sipa-collapsed .sipa-main-wrapper {
+  margin-left: var(--sipa-sidebar-collapsed-w) !important;
+}
+
+/* Mobile Sidebar Overlay */
+.sipa-backdrop {
+  position: fixed;
+  inset: 0;
+  background: rgba(15, 23, 42, 0.5);
+  z-index: 1035;
+  display: none;
+}
+
+@media (max-width: 992px) {
+  .sipa-sidebar {
+    left: calc(var(--sipa-sidebar-w) * -1);
+    width: var(--sipa-sidebar-w) !important;
+  }
+
+  body.sipa-collapsed .sipa-sidebar {
+    width: var(--sipa-sidebar-w) !important;
+  }
+
+  body.sipa-collapsed .sipa-sidebar-header {
+    display: block !important;
+  }
+
+  body.sipa-collapsed .sipa-sidebar-subtext,
+  body.sipa-collapsed .sipa-sidebar-btn-back span,
+  body.sipa-collapsed .sipa-sidebar-section-title,
+  body.sipa-collapsed .sipa-sidebar-active-event-box,
+  body.sipa-collapsed .sipa-menu-text {
+    display: block !important;
+  }
+
+  body.sipa-collapsed .sipa-sidebar-btn-back {
+    justify-content: flex-start !important;
+    padding: 0.65rem 1.25rem !important;
+    gap: 0.5rem !important;
+  }
+
+  body.sipa-collapsed .sipa-menu-link {
+    justify-content: flex-start !important;
+    padding: 0.85rem 1.25rem !important;
+    gap: 0.85rem !important;
+  }
+
+  body.sipa-mobile-open .sipa-sidebar {
+    left: 0;
+    box-shadow: 4px 0 16px rgba(0, 0, 0, 0.15);
+  }
+
+  body.sipa-mobile-open .sipa-backdrop {
+    display: block;
+  }
+
+  .sipa-main-wrapper {
+    margin-left: 0 !important;
+    padding: 1rem 1rem 2rem;
+  }
+}
+
+/* ==========================================================================
+   6. INNER BREADCRUMB & CONTAINER OVERRIDES FOR SIPA STYLE
+   ========================================================================== */
+.sipa-main-wrapper .breadcrumb-wrapper {
+  background: transparent !important;
+  border: none !important;
+  box-shadow: none !important;
+  padding: 0 0 1rem 0 !important;
+  margin-bottom: 1rem !important;
+  font-size: 0.82rem !important;
+  display: flex !important;
+  align-items: center !important;
+  gap: 0.5rem !important;
+  border-radius: 0 !important;
+}
+
+.sipa-main-wrapper .breadcrumb-wrapper a {
+  color: var(--sipa-blue) !important;
+  text-decoration: none !important;
+  font-weight: 700 !important;
+}
+
+.sipa-main-wrapper .breadcrumb-wrapper a:hover {
+  text-decoration: underline !important;
+}
+
+.sipa-main-wrapper .breadcrumb-separator {
+  color: #94a3b8 !important;
+  font-size: 0.8rem !important;
+}
+
+.sipa-main-wrapper .breadcrumb-current {
+  color: #475569 !important;
+  font-weight: 600 !important;
+}
+
+.sipa-main-wrapper .container {
+  max-width: 100% !important;
+  padding-left: 0 !important;
+  padding-right: 0 !important;
+}
+
+/* ==========================================================================
+   7. DASHBOARD SIPA SPECIFIC COMPONENTS (COMPACT KPI & TABLE TOOLBAR)
+   ========================================================================== */
+.sipa-dashboard-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1.5rem;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.sipa-page-title {
+  font-size: 1.45rem;
+  font-weight: 800;
+  color: #0f172a;
+  margin: 0 0 0.25rem 0;
+  letter-spacing: -0.01em;
+}
+
+.sipa-page-subtitle {
+  font-size: 0.85rem;
+  color: #64748b;
+  margin: 0;
+  font-weight: 500;
+}
+
+.sipa-btn-create {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  background-color: var(--sipa-blue);
+  color: #ffffff;
+  font-weight: 700;
+  font-size: 0.85rem;
+  padding: 0.65rem 1.25rem;
+  border-radius: 6px;
+  border: none;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  box-shadow: 0 2px 6px rgba(0, 106, 167, 0.25);
+  text-decoration: none;
+}
+
+.sipa-btn-create:hover {
+  background-color: var(--sipa-blue-dark);
+  transform: translateY(-1px);
+}
+
+/* Compact KPI Grid */
+.sipa-kpi-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+@media (max-width: 1200px) {
+  .sipa-kpi-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 640px) {
+  .sipa-kpi-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.sipa-kpi-card {
+  background: #ffffff;
+  border: 1px solid var(--sipa-border);
+  border-radius: 8px;
+  padding: 0.85rem 1.15rem;
+  display: flex;
+  align-items: center;
+  gap: 0.85rem;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.04);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.sipa-kpi-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
+}
+
+.sipa-kpi-icon {
+  width: 38px;
+  height: 38px;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.sipa-kpi-value {
+  font-size: 1.2rem;
+  font-weight: 800;
+  color: #0f172a;
+  line-height: 1.2;
+}
+
+.sipa-kpi-label {
+  font-size: 0.75rem;
+  color: #64748b;
+  margin-top: 0.15rem;
+  font-weight: 600;
+}
+
+/* Table Toolbar Filters matching SIPA screenshot */
+.sipa-table-toolbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: 1rem 1.25rem;
+  background: #ffffff;
+  border: 1px solid var(--sipa-border);
+  border-bottom: none;
+  border-top-left-radius: 8px;
+  border-top-right-radius: 8px;
+  flex-wrap: wrap;
+}
+
+.sipa-filter-group {
+  display: flex;
+  align-items: center;
+  gap: 0.65rem;
+  flex-wrap: wrap;
+}
+
+.sipa-filter-select,
+.sipa-filter-input {
+  border: 1px solid #cbd5e1;
+  border-radius: 6px;
+  padding: 0.5rem 0.85rem;
+  font-size: 0.82rem;
+  color: #334155;
+  background-color: #ffffff;
+  font-family: inherit;
+  outline: none;
+  transition: border-color 0.2s;
+}
+
+.sipa-filter-select:focus,
+.sipa-filter-input:focus {
+  border-color: var(--sipa-blue);
+  box-shadow: 0 0 0 3px rgba(0, 106, 167, 0.12);
+}
+
+/* SIPA Data Table */
+.sipa-table-container {
+  background: #ffffff;
+  border: 1px solid var(--sipa-border);
+  border-bottom-left-radius: 8px;
+  border-bottom-right-radius: 8px;
+  overflow-x: auto;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.04);
+}
+
+.sipa-data-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.84rem;
+  text-align: left;
+}
+
+.sipa-data-table th {
+  background: #f8fafc;
+  color: #475569;
+  padding: 0.85rem 1rem;
+  font-weight: 700;
+  border-bottom: 1.5px solid #e2e8f0;
+  white-space: nowrap;
+}
+
+.sipa-data-table td {
+  padding: 0.85rem 1rem;
+  border-bottom: 1px solid #f1f5f9;
+  vertical-align: middle;
+  color: #1e293b;
+}
+
+.sipa-data-table tr:hover td {
+  background-color: #f8fafc;
+}
+
+.sipa-table-footer {
+  padding: 0.85rem 1.25rem;
+  background: #ffffff;
+  border-top: 1px solid #f1f5f9;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 0.8rem;
+  color: #64748b;
+  border-bottom-left-radius: 8px;
+  border-bottom-right-radius: 8px;
+}
+
+/* SIPA Table Action Buttons (Clean & Anti-Squish) */
+.sipa-table-actions {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  white-space: nowrap;
+}
+
+.sipa-btn-kelola-row {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  padding: 0.45rem 0.85rem;
+  background-color: var(--sipa-blue, #075ca6);
+  color: #ffffff !important;
+  font-size: 0.78rem;
+  font-weight: 700;
+  border-radius: 0.5rem;
+  text-decoration: none;
+  transition: all 0.15s ease;
+  white-space: nowrap;
+  box-shadow: 0 2px 4px rgba(7, 92, 166, 0.15);
+}
+
+.sipa-btn-kelola-row:hover {
+  background-color: #0284c7;
+  transform: translateY(-1px);
+  box-shadow: 0 4px 8px rgba(7, 92, 166, 0.25);
+}
+
+.sipa-btn-edit-row {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  padding: 0.4rem 0.65rem;
+  background-color: #f0fdf4;
+  color: #16a34a;
+  border: 1px solid #bbf7d0;
+  font-size: 0.78rem;
+  font-weight: 700;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  transition: all 0.15s ease;
+  white-space: nowrap;
+}
+
+.sipa-btn-edit-row:hover {
+  background-color: #16a34a;
+  color: #ffffff;
+  border-color: #16a34a;
+  transform: translateY(-1px);
+}
+
+.sipa-btn-delete-row {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 30px;
+  height: 30px;
+  border: 1px solid #fecaca;
+  background-color: #fef2f2;
+  color: #dc2626;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  transition: all 0.15s ease;
+  flex-shrink: 0;
+}
+
+.sipa-btn-delete-row:hover {
+  background-color: #dc2626;
+  color: #ffffff;
+  border-color: #dc2626;
+}
+
+/* Sidebar Menu Text Overflow Prevention */
+.sipa-menu-text {
+  font-size: 0.82rem;
+  font-weight: 600;
+  max-width: 175px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  display: block;
+}

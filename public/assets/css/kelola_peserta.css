@@ -1,0 +1,477 @@
+/* ==========================================================================
+   TEMU UMRAH - KELOLA PESERTA & AUDIT PAYMENT GATEWAY
+   Theme: Harmonized with Beranda Mahasiswa (AgroPulse Aesthetic)
+   ========================================================================== */
+
+.peserta-wrapper {
+  padding-top: 7.5rem;
+  padding-bottom: 5.5rem;
+  min-height: calc(100vh - 280px);
+  background: #f8fafc;
+  color: #12233f;
+  font-family: 'Manrope', 'Plus Jakarta Sans', system-ui, sans-serif;
+}
+
+/* Breadcrumb Navigasi */
+.breadcrumb-wrapper {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 999px;
+  padding: 0.45rem 1.15rem;
+  font-size: 0.8rem;
+  color: #64748b;
+  box-shadow: 0 4px 12px rgba(18, 35, 63, 0.03);
+  margin-bottom: 1.5rem;
+  flex-wrap: wrap;
+}
+
+.breadcrumb-wrapper a {
+  color: #075ca6;
+  font-weight: 700;
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.breadcrumb-wrapper a:hover {
+  color: #087fc5;
+}
+
+.breadcrumb-separator {
+  color: #94a3b8;
+  font-weight: 600;
+}
+
+.breadcrumb-current {
+  color: #0f172a;
+  font-weight: 700;
+}
+
+/* Header & KPI Overview Card */
+.peserta-header-card {
+  background: #ffffff;
+  border-radius: 1.5rem;
+  padding: 2rem 2.25rem;
+  border: 1px solid #e2e8f0;
+  box-shadow: 0 10px 30px rgba(18, 35, 63, 0.04);
+  margin-bottom: 2rem;
+}
+
+.peserta-header-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+  margin-bottom: 1.5rem;
+}
+
+.peserta-title h1 {
+  font-size: 1.65rem;
+  font-weight: 800;
+  color: #12233f;
+  margin: 0 0 0.35rem;
+  letter-spacing: -0.01em;
+}
+
+.peserta-title p {
+  color: #64748b;
+  font-size: 0.88rem;
+  margin: 0;
+  font-weight: 500;
+}
+
+/* Metrics Row */
+.peserta-stats-row {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+  gap: 1rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid #f1f5f9;
+}
+
+.p-stat-item {
+  background: #f8fafc;
+  border-radius: 1rem;
+  padding: 1rem 1.25rem;
+  border: 1.5px solid #e2e8f0;
+  display: flex;
+  flex-direction: column;
+  transition: all 0.2s ease;
+}
+
+.p-stat-item:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px rgba(18, 35, 63, 0.04);
+}
+
+.stat-border-success {
+  background: #f0fdf4;
+  border-color: #bbf7d0;
+}
+
+.stat-border-warning {
+  background: #fffbeb;
+  border-color: #fde68a;
+}
+
+.stat-border-danger {
+  background: #fef2f2;
+  border-color: #fecaca;
+}
+
+.stat-border-primary {
+  background: #eff6ff;
+  border-color: #bfdbfe;
+}
+
+.p-stat-num {
+  font-size: 1.65rem;
+  font-weight: 800;
+  color: #0f172a;
+  line-height: 1.15;
+}
+
+.p-stat-lbl {
+  font-size: 0.74rem;
+  color: #64748b;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  margin-top: 0.3rem;
+}
+
+.text-success { color: #15803d !important; }
+.text-warning { color: #b45309 !important; }
+.text-danger { color: #dc2626 !important; }
+.text-blue { color: #1d4ed8 !important; }
+
+/* Filter & Search Toolbar */
+.filter-toolbar {
+  background: #ffffff;
+  border-radius: 1.25rem;
+  padding: 1.25rem 1.75rem;
+  border: 1px solid #e2e8f0;
+  box-shadow: 0 6px 20px rgba(18, 35, 63, 0.03);
+  margin-bottom: 2rem;
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.filter-inputs-group {
+  display: flex;
+  gap: 0.85rem;
+  flex-wrap: wrap;
+  align-items: center;
+  flex: 1;
+}
+
+.search-input-wrap {
+  position: relative;
+  min-width: 280px;
+  flex: 1;
+}
+
+.search-input-wrap svg {
+  position: absolute;
+  left: 1rem;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #94a3b8;
+  pointer-events: none;
+}
+
+.search-input-wrap input {
+  width: 100%;
+  border-radius: 999px;
+  border: 1.5px solid #cbd5e1;
+  padding: 0.65rem 1.25rem 0.65rem 2.75rem;
+  font-size: 0.86rem;
+  font-family: inherit;
+  color: #0f172a;
+  transition: all 0.2s ease;
+  box-sizing: border-box;
+}
+
+.search-input-wrap input:focus {
+  border-color: #087fc5;
+  box-shadow: 0 0 0 3px rgba(8, 127, 197, 0.15);
+  outline: none;
+}
+
+.filter-select {
+  border-radius: 999px;
+  border: 1.5px solid #cbd5e1;
+  padding: 0.65rem 1.25rem;
+  font-size: 0.84rem;
+  font-weight: 600;
+  font-family: inherit;
+  color: #334155;
+  background-color: #ffffff;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.filter-select:focus {
+  border-color: #087fc5;
+  outline: none;
+}
+
+/* Tabel Data Peserta */
+.peserta-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.86rem;
+  text-align: left;
+}
+
+.peserta-table th {
+  background-color: #f8fafc;
+  color: #475569;
+  font-weight: 700;
+  font-size: 0.74rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  padding: 1rem 1.25rem;
+  border-bottom: 1.5px solid #e2e8f0;
+  white-space: nowrap;
+}
+
+.peserta-table td {
+  padding: 1.15rem 1.25rem;
+  border-bottom: 1px solid #f1f5f9;
+  color: #334155;
+  vertical-align: middle;
+}
+
+.peserta-table tr:hover td {
+  background-color: #f8fafc;
+}
+
+.peserta-info-cell {
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
+}
+
+.peserta-info-cell .p-name {
+  font-weight: 700;
+  color: #0f172a;
+  font-size: 0.92rem;
+}
+
+.peserta-info-cell .p-nim {
+  font-size: 0.78rem;
+  color: #64748b;
+}
+
+/* Badges */
+.badge-status-p {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  padding: 0.3rem 0.75rem;
+  border-radius: 999px;
+  font-size: 0.74rem;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+  white-space: nowrap;
+}
+
+.badge-hadir-p {
+  background: #dcfce7;
+  color: #15803d;
+  border: 1px solid #bbf7d0;
+}
+
+.badge-absen-p {
+  background: #f1f5f9;
+  color: #64748b;
+  border: 1px solid #e2e8f0;
+}
+
+/* Action Buttons */
+.action-btn-group {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  flex-wrap: wrap;
+}
+
+.btn-icon-action {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  padding: 0.4rem 0.85rem;
+  border-radius: 999px;
+  font-size: 0.78rem;
+  font-weight: 700;
+  text-decoration: none;
+  cursor: pointer;
+  border: 1.5px solid;
+  transition: all 0.2s ease;
+}
+
+.btn-detail-sm {
+  background: #ffffff;
+  color: #075ca6;
+  border-color: #bfdbfe;
+}
+
+.btn-detail-sm:hover {
+  background: #eff6ff;
+  border-color: #087fc5;
+}
+
+.btn-hadir-sm {
+  background: #ffffff;
+  color: #059669;
+  border-color: #a7f3d0;
+}
+
+.btn-hadir-sm:hover {
+  background: #ecfdf5;
+  border-color: #059669;
+}
+
+.btn-hadir-active {
+  background: #10b981;
+  color: #ffffff;
+  border-color: #059669;
+}
+
+.btn-hadir-active:hover {
+  background: #059669;
+}
+
+/* Modal Verifikasi Audit */
+.modal-verif-backdrop {
+  position: fixed;
+  inset: 0;
+  background: rgba(10, 25, 47, 0.65);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  z-index: 9999;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  padding: 1.5rem;
+}
+
+.modal-verif-backdrop.active {
+  display: flex;
+}
+
+.modal-verif-box {
+  background: #ffffff;
+  border-radius: 1.5rem;
+  max-width: 820px;
+  width: 100%;
+  overflow: hidden;
+  box-shadow: 0 25px 60px rgba(10, 37, 75, 0.25);
+  border: 1px solid rgba(226, 232, 240, 0.9);
+  animation: modalScaleIn 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+@keyframes modalScaleIn {
+  from { opacity: 0; transform: scale(0.96); }
+  to { opacity: 1; transform: scale(1); }
+}
+
+.modal-verif-header {
+  background: linear-gradient(135deg, #075ca6, #087fc5);
+  color: #ffffff;
+  padding: 1.35rem 1.75rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.modal-verif-header h3 {
+  margin: 0;
+  font-size: 1.05rem;
+  font-weight: 800;
+  letter-spacing: 0.02em;
+}
+
+.modal-verif-body {
+  padding: 1.75rem;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.75rem;
+}
+
+@media (max-width: 768px) {
+  .modal-verif-body {
+    grid-template-columns: 1fr;
+  }
+}
+
+.struk-card {
+  background: #f8fafc;
+  border: 1.5px dashed #cbd5e1;
+  border-radius: 1.15rem;
+  padding: 1.25rem;
+}
+
+.struk-row {
+  display: flex;
+  justify-content: space-between;
+  padding: 0.35rem 0;
+  font-size: 0.78rem;
+}
+
+.struk-amount-highlight {
+  background: #ecfdf5;
+  border: 1px solid #a7f3d0;
+  border-radius: 0.75rem;
+  padding: 0.75rem 1rem;
+  margin-top: 1rem;
+  text-align: center;
+}
+
+.struk-amount-highlight .amount {
+  font-size: 1.4rem;
+  font-weight: 800;
+  color: #065f46;
+}
+
+.verif-detail-box {
+  background: #f8fafc;
+  border: 1px solid #e2e8f0;
+  border-radius: 1.15rem;
+  padding: 1.25rem;
+}
+
+.verif-detail-item {
+  display: flex;
+  justify-content: space-between;
+  padding: 0.45rem 0;
+  font-size: 0.82rem;
+  border-bottom: 1px solid #f1f5f9;
+}
+
+.verif-detail-item:last-child {
+  border-bottom: none;
+}
+
+.verif-detail-item .lbl {
+  color: #64748b;
+  font-weight: 600;
+}
+
+.verif-detail-item .val {
+  color: #0f172a;
+  font-weight: 700;
+}
+
+.modal-verif-footer {
+  padding: 1.25rem 1.75rem;
+  background: #f8fafc;
+  border-top: 1px solid #e2e8f0;
+}

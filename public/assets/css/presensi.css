@@ -1,0 +1,850 @@
+/* ==========================================================================
+   TEMU UMRAH - MODERN PRESENSI MAHASISWA STYLES (WF6)
+   AgroPulse Design System: Soft Clean Layout, 24px Curved Cards, Zero Raw Emojis
+   ========================================================================== */
+
+.presensi-wrapper {
+  background-color: var(--bg-surface-alt, #f8fafc);
+  min-height: calc(100vh - 80px);
+  padding: 7.5rem 0 5rem 0;
+}
+
+/* ==================== HEADER STRIP ==================== */
+.presensi-header-strip {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  gap: 1.5rem;
+  margin-bottom: 2rem;
+  flex-wrap: wrap;
+}
+
+.presensi-header-left {
+  max-width: 720px;
+}
+
+.presensi-eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  background-color: #ecfdf5;
+  color: #065f46;
+  border: 1px solid #a7f3d0;
+  padding: 0.35rem 0.85rem;
+  border-radius: 9999px;
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  margin-bottom: 0.75rem;
+}
+
+.presensi-pulse-dot {
+  width: 8px;
+  height: 8px;
+  background-color: #10b981;
+  border-radius: 50%;
+  box-shadow: 0 0 0 3px rgba(16, 185, 129, 0.3);
+  animation: presensiPulse 2s infinite ease-in-out;
+}
+
+@keyframes presensiPulse {
+  0% { transform: scale(0.95); box-shadow: 0 0 0 0 rgba(16, 185, 129, 0.5); }
+  70% { transform: scale(1); box-shadow: 0 0 0 6px rgba(16, 185, 129, 0); }
+  100% { transform: scale(0.95); box-shadow: 0 0 0 0 rgba(16, 185, 129, 0); }
+}
+
+.presensi-page-title {
+  font-family: 'Plus Jakarta Sans', 'Manrope', system-ui, sans-serif !important;
+  font-size: 2.15rem;
+  font-weight: 800;
+  color: #0f172a;
+  letter-spacing: -0.03em;
+  margin: 0 0 0.5rem 0;
+  line-height: 1.2;
+}
+
+.presensi-page-desc {
+  font-size: 0.95rem;
+  color: #64748b;
+  margin: 0;
+  line-height: 1.6;
+}
+
+/* Header Event Switcher */
+.presensi-header-switcher {
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+}
+
+.switcher-label {
+  font-size: 0.75rem;
+  font-weight: 700;
+  color: #64748b;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.switcher-select-wrap {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.switcher-icon {
+  position: absolute;
+  left: 0.85rem;
+  color: #003E6D;
+  pointer-events: none;
+}
+
+.switcher-select {
+  appearance: none;
+  background-color: #ffffff;
+  border: 1px solid #cbd5e1;
+  border-radius: 12px;
+  padding: 0.6rem 2.25rem 0.6rem 2.25rem;
+  font-size: 0.85rem;
+  font-weight: 700;
+  color: #0f172a;
+  cursor: pointer;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.03);
+  transition: all 0.2s ease;
+  min-width: 260px;
+}
+
+.switcher-select:focus {
+  outline: none;
+  border-color: #003E6D;
+  box-shadow: 0 0 0 3px rgba(0, 62, 109, 0.15);
+}
+
+/* ==================== ACTIVE SESSION BANNER ==================== */
+.session-info-card {
+  background: linear-gradient(135deg, #ffffff 0%, #f0fdf4 100%);
+  border: 1px solid #bbf7d0;
+  border-radius: 24px;
+  padding: 1.75rem 2rem;
+  margin-bottom: 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1.75rem;
+  box-shadow: 0 10px 25px -5px rgba(16, 185, 129, 0.08);
+  position: relative;
+  overflow: hidden;
+}
+
+.session-info-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 5px;
+  height: 100%;
+  background: #10b981;
+}
+
+.session-info-attended {
+  background: linear-gradient(135deg, #ffffff 0%, #f8fafc 100%);
+  border-color: #cbd5e1;
+}
+.session-info-attended::before {
+  background: #003E6D;
+}
+
+.session-meta-left {
+  flex: 1;
+}
+
+.session-status-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+  padding: 0.35rem 0.85rem;
+  border-radius: 9999px;
+  font-size: 0.72rem;
+  font-weight: 800;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  margin-bottom: 0.65rem;
+}
+
+.badge-active {
+  background-color: #dcfce7;
+  color: #15803d;
+  border: 1px solid #86efac;
+}
+
+.badge-attended {
+  background-color: #e0f2fe;
+  color: #0369a1;
+  border: 1px solid #bae6fd;
+}
+
+.session-live-pulse {
+  width: 7px;
+  height: 7px;
+  background-color: #16a34a;
+  border-radius: 50%;
+  box-shadow: 0 0 0 3px rgba(22, 163, 74, 0.3);
+  animation: presensiPulse 1.5s infinite;
+}
+
+.session-event-title {
+  font-size: 1.4rem;
+  font-weight: 800;
+  color: #0f172a;
+  margin: 0 0 0.85rem 0;
+  line-height: 1.3;
+}
+
+.session-chips-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.65rem 1rem;
+}
+
+.session-chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  font-size: 0.82rem;
+  color: #475569;
+  background-color: rgba(255, 255, 255, 0.75);
+  padding: 0.3rem 0.7rem;
+  border-radius: 8px;
+  border: 1px solid rgba(203, 213, 225, 0.6);
+  font-weight: 600;
+}
+
+.session-chip svg {
+  color: #003E6D;
+  flex-shrink: 0;
+}
+
+.session-chip-reg {
+  background-color: #f1f5f9;
+  color: #0f172a;
+  font-family: monospace;
+  font-weight: 700;
+}
+
+.session-meta-right {
+  display: flex;
+  align-items: center;
+}
+
+.session-countdown-box {
+  background-color: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 16px;
+  padding: 1rem 1.35rem;
+  text-align: center;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.03);
+  min-width: 170px;
+}
+
+.countdown-label {
+  display: block;
+  font-size: 0.68rem;
+  font-weight: 800;
+  color: #94a3b8;
+  letter-spacing: 0.08em;
+  margin-bottom: 0.25rem;
+}
+
+.countdown-value {
+  font-size: 1.15rem;
+  font-weight: 800;
+  color: #0f172a;
+  margin-bottom: 0.15rem;
+}
+
+.countdown-sub {
+  display: block;
+  font-size: 0.75rem;
+  color: #64748b;
+}
+
+.text-success-strong {
+  color: #15803d !important;
+}
+
+/* ==================== 3-STEP PANDUAN ==================== */
+.attendance-steps {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.25rem;
+  margin-bottom: 2rem;
+}
+
+.attendance-step-card {
+  background-color: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 20px;
+  padding: 1.25rem 1.4rem;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.02);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.attendance-step-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.04);
+}
+
+.step-badge-wrap {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  margin-bottom: 0.75rem;
+}
+
+.step-num-pill {
+  font-size: 0.7rem;
+  font-weight: 800;
+  color: #64748b;
+  background-color: #f1f5f9;
+  padding: 0.2rem 0.55rem;
+  border-radius: 9999px;
+  letter-spacing: 0.05em;
+}
+
+.step-icon-circle {
+  width: 32px;
+  height: 32px;
+  border-radius: 10px;
+  background-color: #e0f2fe;
+  color: #003E6D;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.step-body strong {
+  display: block;
+  font-size: 0.9rem;
+  font-weight: 700;
+  color: #0f172a;
+  margin-bottom: 0.3rem;
+}
+
+.step-body p {
+  font-size: 0.8rem;
+  color: #64748b;
+  margin: 0;
+  line-height: 1.45;
+}
+
+/* ==================== 2-COLUMN SPLIT GRID ==================== */
+.presensi-grid {
+  display: grid;
+  grid-template-columns: 1.15fr 1fr;
+  gap: 2rem;
+  margin-bottom: 3rem;
+  align-items: stretch;
+}
+
+.presensi-method-card {
+  background-color: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 24px;
+  padding: 2rem;
+  box-shadow: 0 4px 20px -2px rgba(0, 0, 0, 0.04);
+  display: flex;
+  flex-direction: column;
+}
+
+.method-title-header {
+  display: flex;
+  gap: 1rem;
+  align-items: flex-start;
+  margin-bottom: 1.5rem;
+}
+
+.method-badge-icon {
+  width: 44px;
+  height: 44px;
+  border-radius: 14px;
+  background-color: #e0f2fe;
+  color: #003E6D;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.method-heading {
+  font-size: 1.18rem;
+  font-weight: 800;
+  color: #0f172a;
+  margin: 0 0 0.35rem 0;
+}
+
+.method-sub {
+  font-size: 0.84rem;
+  color: #64748b;
+  margin: 0;
+  line-height: 1.5;
+}
+
+/* Camera Scanner Viewfinder */
+.camera-scanner-wrapper {
+  background: radial-gradient(circle at center, #1e293b 0%, #090d16 100%);
+  border-radius: 20px;
+  aspect-ratio: 4 / 3;
+  width: 100%;
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: inset 0 0 30px rgba(0, 0, 0, 0.8);
+  margin-bottom: 1.25rem;
+  border: 1px solid #334155;
+}
+
+#interactiveQrReader {
+  width: 100% !important;
+  height: 100% !important;
+  position: absolute !important;
+  inset: 0 !important;
+  overflow: hidden;
+  border-radius: 20px;
+  background: transparent;
+}
+
+#interactiveQrReader video {
+  width: 100% !important;
+  height: 100% !important;
+  object-fit: cover !important;
+  border-radius: 20px;
+}
+
+.scanner-reticle-box {
+  width: 200px;
+  height: 200px;
+  border: 2px dashed rgba(255, 255, 255, 0.25);
+  border-radius: 16px;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.scanner-reticle-box::before,
+.scanner-reticle-box::after {
+  content: '';
+  position: absolute;
+  width: 24px;
+  height: 24px;
+  border-color: #38bdf8;
+  border-style: solid;
+}
+
+.scanner-reticle-box::before {
+  top: -2px;
+  left: -2px;
+  border-width: 4px 0 0 4px;
+  border-top-left-radius: 10px;
+}
+
+.scanner-reticle-box::after {
+  bottom: -2px;
+  right: -2px;
+  border-width: 0 4px 4px 0;
+  border-bottom-right-radius: 10px;
+}
+
+.scanner-laser-line {
+  position: absolute;
+  top: 0;
+  left: 5%;
+  right: 5%;
+  height: 3px;
+  background: linear-gradient(90deg, transparent, #38bdf8, #0284c7, transparent);
+  box-shadow: 0 0 14px #38bdf8;
+  animation: laserSweepModern 2.4s infinite ease-in-out alternate;
+}
+
+@keyframes laserSweepModern {
+  0% { top: 6%; opacity: 0.6; }
+  100% { top: 92%; opacity: 1; }
+}
+
+.reticle-caption {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.4rem;
+  color: rgba(255, 255, 255, 0.7);
+  font-size: 0.74rem;
+  text-align: center;
+  padding: 1rem;
+}
+
+.reticle-caption svg {
+  color: #38bdf8;
+}
+
+.camera-controls-bar {
+  display: flex;
+  gap: 0.75rem;
+  margin-bottom: 1rem;
+}
+
+.btn-control-sub {
+  flex: 1;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.45rem;
+  padding: 0.6rem 0.85rem;
+  font-size: 0.82rem;
+  font-weight: 700;
+  border-radius: 12px;
+  border: 1px solid #cbd5e1;
+  background: #ffffff;
+  color: #334155;
+  transition: all 0.2s ease;
+}
+
+.btn-control-sub:hover {
+  background: #f1f5f9;
+  border-color: #94a3b8;
+  color: #0f172a;
+}
+
+.btn-scan-action {
+  width: 100%;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  padding: 0.85rem;
+  font-size: 0.95rem;
+  font-weight: 800;
+  border-radius: 14px;
+  background-color: #003E6D;
+  color: #ffffff;
+  border: none;
+  cursor: pointer;
+  box-shadow: 0 4px 14px rgba(0, 62, 109, 0.2);
+  transition: all 0.2s ease;
+}
+
+.btn-scan-action:hover {
+  background-color: #002d50;
+  transform: translateY(-1px);
+  box-shadow: 0 6px 18px rgba(0, 62, 109, 0.28);
+}
+
+.anti-fraud-note {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.75rem;
+  background-color: #f8fafc;
+  border: 1px solid #e2e8f0;
+  border-radius: 14px;
+  padding: 0.85rem 1rem;
+  margin-top: 1.25rem;
+}
+
+.anti-fraud-icon {
+  color: #003E6D;
+  margin-top: 0.15rem;
+  flex-shrink: 0;
+}
+
+.anti-fraud-text {
+  font-size: 0.78rem;
+  color: #475569;
+  line-height: 1.45;
+}
+
+.anti-fraud-text strong {
+  display: block;
+  color: #0f172a;
+  margin-bottom: 0.15rem;
+}
+
+/* ==================== METODE B: TOKEN INPUT ==================== */
+.token-input-group {
+  margin: 1rem 0 1.5rem 0;
+  text-align: center;
+}
+
+.token-label {
+  font-size: 0.76rem;
+  font-weight: 800;
+  color: #64748b;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  display: block;
+  margin-bottom: 1rem;
+}
+
+.token-boxes-row {
+  display: flex;
+  justify-content: center;
+  gap: 0.65rem;
+  margin-bottom: 0.85rem;
+}
+
+.token-box-input {
+  width: 48px;
+  height: 56px;
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+  font-size: 1.65rem;
+  font-weight: 800;
+  text-align: center;
+  text-transform: uppercase;
+  border: 2px solid #cbd5e1;
+  border-radius: 12px;
+  background-color: #f8fafc;
+  color: #003E6D;
+  outline: none;
+  transition: all 0.2s ease;
+}
+
+.token-box-input:focus {
+  border-color: #003E6D;
+  background-color: #ffffff;
+  box-shadow: 0 0 0 4px rgba(0, 62, 109, 0.12);
+  transform: translateY(-2px);
+}
+
+.token-hint-text {
+  font-size: 0.78rem;
+  color: #64748b;
+  margin: 0;
+  line-height: 1.4;
+}
+
+.token-error-alert {
+  background-color: #fef2f2;
+  border: 1px solid #fecaca;
+  color: #b91c1c;
+  border-radius: 12px;
+  padding: 0.75rem 1rem;
+  font-size: 0.82rem;
+  font-weight: 600;
+  margin-bottom: 1.25rem;
+  text-align: center;
+}
+
+.btn-token-submit {
+  width: 100%;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  padding: 0.95rem;
+  font-size: 1rem;
+  font-weight: 800;
+  border-radius: 14px;
+  background-color: #003E6D;
+  color: #ffffff;
+  border: none;
+  cursor: pointer;
+  box-shadow: 0 4px 14px rgba(0, 62, 109, 0.2);
+  transition: all 0.2s ease;
+  margin-top: auto;
+}
+
+.btn-token-submit:hover {
+  background-color: #002d50;
+  transform: translateY(-1px);
+  box-shadow: 0 6px 18px rgba(0, 62, 109, 0.28);
+}
+
+.token-info-callout {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.65rem;
+  font-size: 0.78rem;
+  color: #64748b;
+  background-color: #f8fafc;
+  border: 1px solid #e2e8f0;
+  border-radius: 14px;
+  padding: 0.85rem 1rem;
+  margin-top: 1.5rem;
+  line-height: 1.45;
+}
+
+.token-info-callout svg {
+  color: #003E6D;
+  flex-shrink: 0;
+  margin-top: 0.15rem;
+}
+
+/* ==================== ATTENDANCE SUCCESS CARD ==================== */
+.attendance-success-card {
+  background-color: #ffffff;
+  border: 1px solid #86efac;
+  border-radius: 28px;
+  padding: 3rem 2.5rem;
+  text-align: center;
+  box-shadow: 0 20px 45px -15px rgba(16, 185, 129, 0.18);
+  margin-bottom: 4rem;
+  animation: fadeInPresensi 0.4s ease;
+}
+
+@keyframes fadeInPresensi {
+  from { opacity: 0; transform: translateY(12px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.attendance-success-icon {
+  width: 76px;
+  height: 76px;
+  border-radius: 50%;
+  background: #dcfce7;
+  color: #15803d;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 1.5rem auto;
+  box-shadow: 0 0 0 8px rgba(220, 252, 231, 0.6);
+}
+
+.success-title {
+  font-size: 1.75rem;
+  font-weight: 800;
+  color: #15803d;
+  letter-spacing: -0.02em;
+  margin: 0 0 0.5rem 0;
+}
+
+.success-desc {
+  font-size: 0.95rem;
+  color: #64748b;
+  max-width: 620px;
+  margin: 0 auto 2rem auto;
+  line-height: 1.55;
+}
+
+.attendance-details-list {
+  max-width: 580px;
+  margin: 0 auto 2.5rem auto;
+  background-color: #f8fafc;
+  border: 1px solid #e2e8f0;
+  border-radius: 20px;
+  padding: 1.25rem 1.75rem;
+  text-align: left;
+}
+
+.att-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.7rem 0;
+  border-bottom: 1px solid #e2e8f0;
+  font-size: 0.88rem;
+}
+
+.att-row:last-child {
+  border-bottom: none;
+}
+
+.att-row span:first-child {
+  color: #64748b;
+  font-weight: 600;
+}
+
+.att-row span:last-child {
+  font-weight: 700;
+  color: #0f172a;
+}
+
+.text-brand-strong {
+  color: #003E6D !important;
+}
+
+.text-success-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  background-color: #dcfce7;
+  color: #15803d;
+  padding: 0.25rem 0.65rem;
+  border-radius: 9999px;
+  font-size: 0.8rem;
+  font-weight: 700;
+}
+
+.attendance-actions-row {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.btn-lg-action {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.85rem 1.75rem;
+  font-size: 0.95rem;
+  font-weight: 800;
+  border-radius: 14px;
+}
+
+/* Empty State Card */
+.presensi-empty-card {
+  background-color: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 24px;
+  padding: 4rem 2rem;
+  text-align: center;
+  max-width: 620px;
+  margin: 2rem auto;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.03);
+}
+
+.presensi-empty-icon {
+  width: 72px;
+  height: 72px;
+  border-radius: 50%;
+  background-color: #f1f5f9;
+  color: #64748b;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 1.5rem auto;
+}
+
+.empty-title {
+  font-size: 1.35rem;
+  font-weight: 800;
+  color: #0f172a;
+  margin: 0 0 0.5rem 0;
+}
+
+.empty-desc {
+  font-size: 0.9rem;
+  color: #64748b;
+  margin: 0 auto 1.75rem auto;
+  line-height: 1.55;
+}
+
+/* ==================== RESPONSIVE ==================== */
+@media (max-width: 960px) {
+  .presensi-grid {
+    grid-template-columns: 1fr;
+  }
+  .attendance-steps {
+    grid-template-columns: 1fr;
+  }
+  .session-info-card {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .session-meta-right {
+    width: 100%;
+  }
+  .session-countdown-box {
+    width: 100%;
+  }
+}

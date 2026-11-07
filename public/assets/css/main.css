@@ -1,0 +1,265 @@
+/* ==========================================================================
+   TEMU UMRAH - SISTEM INFORMASI EVENT MAHASISWA UMRAH
+   Global Design Tokens & CSS Variables (Design System Harmonisasi)
+   Brand Identity: Biru Bahari & Emas Maritim (FTTK UMRAH)
+   ========================================================================== */
+
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap');
+
+:root {
+  /* Palet Resmi Kemaritiman UMRAH (Wajib Design System) */
+  --umrah-navy: #003E6D;       /* Warna primer dominan */
+  --umrah-navy-dark: #00223D;  /* Header pekat / footer */
+  --umrah-navy-light: #0A4F85; /* Aksen navy terang */
+  --umrah-blue: #005696;       /* Aksen tautan & interaksi */
+  --umrah-blue-light: #EFF6FF; /* Background aktif / highlight */
+  --umrah-gold: #F1A80A;       /* Aksen prestasi, SKP & status */
+  --umrah-gold-hover: #D97706; /* Hover aksen emas */
+  
+  /* Netral & Semantik */
+  --bg-app: #F8FAFC;           /* Background dasar halaman */
+  --bg-surface: #FFFFFF;       /* Background kartu / panel */
+  --bg-surface-alt: #F1F5F9;   /* Background netral kedua */
+  --border-color: #E2E8F0;     /* Garis batas halus */
+  --border-light: #F1F5F9;     /* Garis batas ultra-halus */
+  --border-strong: #CBD5E1;    /* Garis batas tegas */
+  --text-main: #0F172A;        /* Teks utama (kontras tinggi) */
+  --text-body: #334155;        /* Teks isi paragraf */
+  --text-muted: #64748B;       /* Teks sekunder / keterangan */
+  --text-subtle: #94A3B8;      /* Teks redup / placeholder */
+  --text-light: #94A3B8;
+  --text-on-dark: #FFFFFF;
+  
+  /* Status Semantik */
+  --success: #10B981;          --success-bg: #ECFDF5;
+  --warning: #F59E0B;          --warning-bg: #FFFBEB;
+  --danger: #EF4444;           --danger-bg: #FEF2F2;
+  --info: #38BDF8;             --info-bg: #F0F9FF;
+  
+  /* Backward Compatibility Semantic Tokens */
+  --success-text: #059669;     --success-border: #A7F3D0;
+  --warning-text: #D97706;     --warning-border: #FDE68A;
+  --danger-text: #DC2626;      --danger-border: #FECACA;
+  --umrah-ocean-subtle: #EFF6FF;
+  --umrah-ocean-tint: #F0F7FD;
+
+  /* Tipografi & Ukuran Radius (Plus Jakarta Sans) */
+  --font-family: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+  --radius-xs: 4px;
+  --radius-sm: 6px;
+  --radius-md: 10px;
+  --radius-lg: 16px;
+  --radius-xl: 22px;
+  --radius-full: 9999px;
+  
+  /* Bayangan Halus (Elevation & Shadows) */
+  --shadow-xs: 0 1px 2px rgba(0, 0, 0, 0.04);
+  --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.05);
+  --shadow-md: 0 4px 12px rgba(0, 0, 0, 0.06);
+  --shadow-lg: 0 10px 25px rgba(0, 0, 0, 0.08);
+  --shadow-xl: 0 20px 25px -5px rgba(0, 62, 109, 0.12);
+  --shadow-hover: 0 12px 24px rgba(0, 62, 109, 0.10);
+
+  /* Transisi */
+  --transition: 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+  --transition-fast: 0.15s ease;
+}
+
+/* Reset & Box Sizing */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--font-family);
+  background-color: var(--bg-app);
+  color: var(--text-body);
+  line-height: 1.6;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  -webkit-font-smoothing: antialiased;
+}
+
+.container {
+  width: 100%;
+  max-width: 1240px;
+  margin-left: auto !important;
+  margin-right: auto !important;
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+  box-sizing: border-box;
+}
+
+/* Base Headings - Sizing & Color Harmonized */
+h1, h2, h3, h4, h5, h6 {
+  color: var(--text-main);
+  font-weight: 700;
+  line-height: 1.3;
+}
+
+h1 {
+  font-size: 1.75rem;
+  font-weight: 800;
+  color: var(--umrah-navy);
+}
+
+h2 {
+  font-size: 1.45rem;
+  font-weight: 800;
+  color: var(--umrah-navy);
+}
+
+h3 {
+  font-size: 1.15rem;
+  font-weight: 700;
+}
+
+a {
+  color: var(--umrah-blue);
+  text-decoration: none;
+  transition: color var(--transition);
+}
+a:hover {
+  color: var(--umrah-navy);
+}
+
+/* Reusable Standard Badges */
+.badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  padding: 0.25rem 0.65rem;
+  font-size: 0.72rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  border-radius: var(--radius-sm);
+  white-space: nowrap;
+}
+.badge-free {
+  background-color: var(--success-bg);
+  color: var(--success);
+  border: 1px solid #A7F3D0;
+}
+.badge-paid {
+  background-color: var(--umrah-blue-light);
+  color: var(--umrah-navy);
+  border: 1px solid #BFDBFE;
+}
+.badge-category {
+  background-color: var(--bg-surface-alt);
+  color: var(--text-body);
+  border: 1px solid var(--border-color);
+}
+
+/* Reusable Standard Buttons */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  font-family: var(--font-family);
+  font-size: 0.9rem;
+  font-weight: 700;
+  padding: 0.65rem 1.25rem;
+  min-height: 40px;
+  border-radius: var(--radius-md);
+  border: 1px solid transparent;
+  cursor: pointer;
+  transition: all var(--transition);
+  text-decoration: none;
+  line-height: 1.2;
+}
+
+.btn-primary {
+  background-color: var(--umrah-navy);
+  color: #FFFFFF;
+  border-color: var(--umrah-navy);
+}
+.btn-primary:hover {
+  background-color: var(--umrah-navy-dark);
+  color: #FFFFFF;
+  transform: translateY(-1px);
+  box-shadow: var(--shadow-md);
+}
+
+.btn-secondary, .btn-gold {
+  background-color: var(--umrah-gold);
+  color: var(--umrah-navy-dark);
+  border-color: var(--umrah-gold);
+  font-weight: 700;
+}
+.btn-secondary:hover, .btn-gold:hover {
+  background-color: var(--umrah-gold-hover);
+  color: var(--umrah-navy-dark);
+  transform: translateY(-1px);
+  box-shadow: var(--shadow-md);
+}
+
+.btn-outline {
+  background-color: transparent;
+  color: var(--umrah-navy);
+  border: 1px solid var(--border-color);
+}
+.btn-outline:hover {
+  background-color: var(--umrah-blue-light);
+  border-color: var(--umrah-blue);
+  color: var(--umrah-navy);
+  transform: translateY(-1px);
+}
+
+.btn-danger {
+  background-color: var(--danger);
+  color: #FFFFFF;
+  border-color: var(--danger);
+}
+.btn-danger:hover {
+  background-color: #DC2626;
+  color: #FFFFFF;
+  transform: translateY(-1px);
+  box-shadow: var(--shadow-md);
+}
+
+.btn-success {
+  background-color: var(--success);
+  color: #FFFFFF;
+  border-color: var(--success);
+}
+.btn-success:hover {
+  background-color: #059669;
+  color: #FFFFFF;
+  transform: translateY(-1px);
+  box-shadow: var(--shadow-md);
+}
+
+.btn-sm {
+  padding: 0.4rem 0.85rem;
+  min-height: 32px;
+  font-size: 0.8rem;
+  font-weight: 700;
+  border-radius: var(--radius-sm);
+}
+
+.btn-lg {
+  padding: 0.85rem 1.75rem;
+  min-height: 48px;
+  font-size: 1rem;
+  font-weight: 700;
+  border-radius: var(--radius-md);
+}
+
+/* Micro Animations */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(6px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+.fade-in {
+  animation: fadeIn 0.3s ease-out forwards;
+}

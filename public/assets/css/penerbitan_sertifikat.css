@@ -1,0 +1,732 @@
+/* ==========================================================================
+   TEMU UMRAH - PENERBITAN E-SERTIFIKAT (SISTEM HYBRID)
+   Theme: Harmonized with Beranda Mahasiswa (AgroPulse Aesthetic)
+   Maritime Blue #087fc5, Deep Navy #075ca6, Soft Blue #edf5ff, Ink #12233f
+   ========================================================================== */
+
+.terbit-wrapper {
+  padding-top: 1rem;
+  padding-bottom: 3.5rem;
+  min-height: calc(100vh - 180px);
+  background: #f8fafc;
+  color: #12233f;
+  font-family: 'Manrope', 'Plus Jakarta Sans', system-ui, sans-serif;
+}
+
+/* Breadcrumb Navigasi */
+.breadcrumb-wrapper {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 999px;
+  padding: 0.45rem 1.15rem;
+  font-size: 0.8rem;
+  color: #64748b;
+  box-shadow: 0 4px 12px rgba(18, 35, 63, 0.03);
+  margin-bottom: 1.5rem;
+  flex-wrap: wrap;
+}
+
+.breadcrumb-wrapper a {
+  color: #075ca6;
+  font-weight: 700;
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.breadcrumb-wrapper a:hover {
+  color: #087fc5;
+}
+
+.breadcrumb-separator {
+  color: #94a3b8;
+  font-weight: 600;
+}
+
+.breadcrumb-current {
+  color: #0f172a;
+  font-weight: 700;
+}
+
+/* Prerequisite Banner */
+.prereq-banner {
+  background: linear-gradient(135deg, #f0fdf4 0%, #ecfdf5 100%);
+  border: 1.5px solid #bbf7d0;
+  border-radius: 1.25rem;
+  padding: 1.25rem 1.75rem;
+  margin-bottom: 2rem;
+  display: flex;
+  align-items: center;
+  gap: 1.25rem;
+  box-shadow: 0 8px 24px rgba(16, 185, 129, 0.06);
+}
+
+.prereq-icon {
+  width: 48px;
+  height: 48px;
+  background: #10b981;
+  color: #ffffff;
+  border-radius: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.25rem;
+  flex-shrink: 0;
+  box-shadow: 0 6px 16px rgba(16, 185, 129, 0.25);
+}
+
+.prereq-content h3 {
+  font-size: 1.05rem;
+  font-weight: 800;
+  color: #065f46;
+  margin: 0 0 0.25rem;
+}
+
+.prereq-content p {
+  margin: 0;
+  font-size: 0.88rem;
+  color: #047857;
+  font-weight: 500;
+  line-height: 1.5;
+}
+
+/* 2 Column Main Layout */
+.terbit-grid {
+  display: grid;
+  grid-template-columns: 1.08fr 0.92fr;
+  gap: 2rem;
+  align-items: start;
+}
+
+@media (max-width: 992px) {
+  .terbit-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.terbit-card {
+  background: #ffffff;
+  border-radius: 1.5rem;
+  border: 1px solid #e2e8f0;
+  box-shadow: 0 10px 30px rgba(18, 35, 63, 0.04);
+  overflow: hidden;
+}
+
+.terbit-card-header {
+  padding: 0.85rem 1.35rem;
+  background: #006aa7;
+  color: #ffffff;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.terbit-card-header h2 {
+  font-size: 0.92rem;
+  font-weight: 800;
+  color: #ffffff;
+  margin: 0;
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  letter-spacing: 0.02em;
+}
+
+.terbit-card-body {
+  padding: 1.25rem 1.5rem;
+}
+
+/* Tab Switcher Metode Hybrid */
+.hybrid-method-tabs {
+  display: flex;
+  gap: 0.4rem;
+  background: #f1f5f9;
+  padding: 0.35rem;
+  border-radius: 999px;
+  margin-bottom: 1.75rem;
+  border: 1px solid #e2e8f0;
+}
+
+.hybrid-tab-btn {
+  flex: 1;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  padding: 0.7rem 1.25rem;
+  font-size: 0.85rem;
+  font-weight: 700;
+  color: #64748b;
+  border-radius: 999px;
+  border: none;
+  background: transparent;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  text-align: center;
+  font-family: inherit;
+}
+
+.hybrid-tab-btn:hover {
+  color: #075ca6;
+}
+
+.hybrid-tab-btn.active {
+  background: #ffffff;
+  color: #075ca6;
+  box-shadow: 0 4px 12px rgba(18, 35, 63, 0.08);
+}
+
+/* Template Active Box */
+.template-active-box {
+  background: linear-gradient(135deg, #f0fdf4 0%, #f7fee7 100%);
+  border: 1.5px solid #bbf7d0;
+  border-radius: 1.25rem;
+  padding: 1.25rem 1.5rem;
+  margin-bottom: 1.5rem;
+  box-shadow: 0 4px 12px rgba(16, 185, 129, 0.05);
+}
+
+.template-active-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 0.85rem;
+}
+
+.template-badge-success {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  background: #dcfce7;
+  color: #15803d;
+  font-size: 0.78rem;
+  font-weight: 700;
+  padding: 0.3rem 0.75rem;
+  border-radius: 999px;
+  border: 1px solid #a7f3d0;
+}
+
+.template-thumb-row {
+  display: flex;
+  gap: 1.25rem;
+  align-items: center;
+}
+
+.template-thumb-img {
+  width: 140px;
+  height: 90px;
+  object-fit: cover;
+  border-radius: 0.75rem;
+  border: 2px solid #86efac;
+  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.08);
+}
+
+.template-thumb-info strong {
+  display: block;
+  font-size: 0.95rem;
+  font-weight: 800;
+  color: #0f172a;
+  margin-bottom: 0.25rem;
+}
+
+.template-thumb-info p {
+  font-size: 0.82rem;
+  color: #166534;
+  margin: 0 0 0.6rem;
+  line-height: 1.4;
+}
+
+/* Upload Dropzone */
+.upload-dropzone {
+  border: 2px dashed #93c5fd;
+  border-radius: 1.25rem;
+  padding: 1.75rem 1.5rem;
+  text-align: center;
+  background: #f8fafc;
+  transition: all 0.25s ease;
+  cursor: pointer;
+}
+
+.upload-dropzone:hover {
+  border-color: #087fc5;
+  background: #eff6ff;
+  transform: translateY(-2px);
+}
+
+.upload-dropzone svg {
+  color: #087fc5;
+  margin-bottom: 0.5rem;
+}
+
+/* Form Styles */
+.form-field-group {
+  margin-bottom: 1.35rem;
+}
+
+.form-field-group label,
+.form-label {
+  display: block;
+  font-size: 0.85rem;
+  font-weight: 700;
+  color: #12233f;
+  margin-bottom: 0.45rem;
+}
+
+.form-field-group .form-hint {
+  font-size: 0.78rem;
+  color: #64748b;
+  margin-top: 0.4rem;
+}
+
+.terbit-input {
+  width: 100%;
+  padding: 0.75rem 1rem;
+  border-radius: 0.75rem;
+  border: 1.5px solid #e2e8f0;
+  background: #ffffff;
+  font-family: inherit;
+  font-size: 0.88rem;
+  color: #12233f;
+  box-sizing: border-box;
+  transition: all 0.2s ease;
+}
+
+.terbit-input:focus {
+  outline: none;
+  border-color: #087fc5;
+  box-shadow: 0 0 0 4px rgba(8, 127, 197, 0.12);
+}
+
+/* Table in Tab File */
+.peserta-cert-table {
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0;
+  margin-top: 1rem;
+  font-size: 0.84rem;
+  border: 1px solid #e2e8f0;
+  border-radius: 1rem;
+  overflow: hidden;
+}
+
+.peserta-cert-table th {
+  background: #f8fafc;
+  color: #475569;
+  padding: 0.85rem 1rem;
+  font-weight: 700;
+  text-align: left;
+  border-bottom: 1.5px solid #e2e8f0;
+}
+
+.peserta-cert-table td {
+  padding: 0.85rem 1rem;
+  border-bottom: 1px solid #f1f5f9;
+  vertical-align: middle;
+  background: #ffffff;
+}
+
+.peserta-cert-table tr:last-child td {
+  border-bottom: none;
+}
+
+.badge-file-ready {
+  background: #ecfdf5;
+  color: #059669;
+  border: 1px solid #a7f3d0;
+  padding: 0.25rem 0.65rem;
+  border-radius: 999px;
+  font-size: 0.72rem;
+  font-weight: 700;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+}
+
+.badge-file-pending {
+  background: #fffbeb;
+  color: #d97706;
+  border: 1px solid #fde68a;
+  padding: 0.25rem 0.65rem;
+  border-radius: 999px;
+  font-size: 0.72rem;
+  font-weight: 700;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+}
+
+.btn-upload-file-mini {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  padding: 0.45rem 0.85rem;
+  background: #eff6ff;
+  color: #075ca6;
+  border: 1.5px solid #bfdbfe;
+  border-radius: 999px;
+  font-size: 0.78rem;
+  font-weight: 700;
+  cursor: pointer;
+  text-decoration: none;
+  transition: all 0.2s ease;
+}
+
+.btn-upload-file-mini:hover {
+  background: #087fc5;
+  color: #ffffff;
+  border-color: #087fc5;
+  box-shadow: 0 4px 12px rgba(8, 127, 197, 0.25);
+}
+
+/* Mini Certificate Preview in Right Column */
+.mini-cert-wrapper {
+  background: #f8fafc;
+  border: 1px solid #e2e8f0;
+  border-radius: 1.25rem;
+  padding: 1.25rem;
+  margin-bottom: 1.5rem;
+}
+
+.mini-cert-frame {
+  background: #ffffff;
+  border: 4px double #ffd65b;
+  border-radius: 0.75rem;
+  padding: 1.75rem 1.5rem;
+  text-align: center;
+  position: relative;
+  box-shadow: 0 6px 20px rgba(18, 35, 63, 0.06);
+}
+
+.mini-cert-inst {
+  font-size: 0.75rem;
+  font-weight: 800;
+  color: #075ca6;
+  letter-spacing: 0.8px;
+  text-transform: uppercase;
+}
+
+.mini-cert-title {
+  font-size: 1.25rem;
+  font-weight: 900;
+  color: #b45309;
+  letter-spacing: 1px;
+  margin: 0.4rem 0 0.25rem;
+}
+
+.mini-cert-no {
+  font-size: 0.72rem;
+  font-family: monospace;
+  color: #64748b;
+  margin-bottom: 0.75rem;
+}
+
+.mini-cert-recipient {
+  font-size: 1.15rem;
+  font-weight: 800;
+  color: #075ca6;
+  border-bottom: 1.5px solid #075ca6;
+  display: inline-block;
+  padding-bottom: 0.2rem;
+  margin-bottom: 0.5rem;
+}
+
+.mini-cert-desc {
+  font-size: 0.78rem;
+  color: #475569;
+  line-height: 1.4;
+  margin-bottom: 1rem;
+}
+
+.mini-cert-signers {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 1rem;
+  border-top: 1px dashed #e2e8f0;
+  padding-top: 0.75rem;
+  font-size: 0.72rem;
+}
+
+.mini-signer-name {
+  font-weight: 700;
+  color: #075ca6;
+  margin-top: 0.25rem;
+}
+
+/* Recipients Summary Box */
+.recipients-box {
+  background: #f8fafc;
+  border: 1px solid #e2e8f0;
+  border-radius: 1rem;
+  padding: 0.75rem;
+  max-height: 200px;
+  overflow-y: auto;
+  margin-bottom: 1.5rem;
+}
+
+.recipient-mini-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.55rem 0.75rem;
+  border-bottom: 1px solid #f1f5f9;
+  font-size: 0.82rem;
+  border-radius: 0.5rem;
+  transition: background 0.15s ease;
+}
+
+.recipient-mini-row:hover {
+  background: #ffffff;
+}
+
+.recipient-mini-row:last-child {
+  border-bottom: none;
+}
+
+/* Primary Batch Button */
+.btn-batch-publish {
+  width: 100%;
+  padding: 0.95rem 1.5rem;
+  background: linear-gradient(135deg, #087fc5 0%, #075ca6 100%);
+  color: #ffffff;
+  border: none;
+  border-radius: 999px;
+  font-weight: 800;
+  font-size: 0.92rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.6rem;
+  margin-top: 1.5rem;
+  cursor: pointer;
+  box-shadow: 0 8px 24px rgba(8, 127, 197, 0.25);
+  transition: all 0.25s ease;
+  font-family: inherit;
+}
+
+.btn-batch-publish:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 12px 28px rgba(8, 127, 197, 0.35);
+  background: linear-gradient(135deg, #0988d4 0%, #0867b8 100%);
+}
+
+.btn-batch-publish:active {
+  transform: translateY(0);
+}
+
+/* ==========================================================================
+   CANVA BULK UPLOAD SYSTEM & SIPA REFINEMENTS
+   ========================================================================== */
+
+/* Canva Guide Strip (3 Langkah Cepat) */
+.canva-guide-strip {
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 1rem;
+  padding: 0.95rem 1.25rem;
+  margin-bottom: 1.15rem;
+  box-shadow: 0 4px 16px rgba(18, 35, 63, 0.04);
+}
+
+.canva-guide-title {
+  font-size: 0.9rem;
+  font-weight: 800;
+  color: #075ca6;
+  margin-bottom: 0.65rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.canva-guide-steps {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 0.85rem;
+}
+
+@media (max-width: 768px) {
+  .canva-guide-steps {
+    grid-template-columns: 1fr;
+  }
+}
+
+.canva-step-card {
+  background: #f8fafc;
+  border: 1px solid #e2e8f0;
+  border-radius: 0.65rem;
+  padding: 0.65rem 0.85rem;
+  position: relative;
+}
+
+.canva-step-num {
+  width: 22px;
+  height: 22px;
+  background: #006aa7;
+  color: #ffffff;
+  border-radius: 50%;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.72rem;
+  font-weight: 800;
+  margin-bottom: 0.35rem;
+}
+
+.canva-step-card h4 {
+  font-size: 0.8rem;
+  font-weight: 700;
+  color: #0f172a;
+  margin: 0 0 0.15rem;
+}
+
+.canva-step-card p {
+  font-size: 0.72rem;
+  color: #64748b;
+  margin: 0;
+  line-height: 1.35;
+}
+
+/* Canva Dropzone Area */
+.canva-dropzone {
+  border: 2px dashed #0284c7;
+  border-radius: 1rem;
+  background: #f0f9ff;
+  padding: 1.4rem 1.25rem;
+  text-align: center;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  position: relative;
+  margin-bottom: 1rem;
+}
+
+.canva-dropzone:hover, .canva-dropzone.dragover {
+  background: #e0f2fe;
+  border-color: #0369a1;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(2, 132, 199, 0.15);
+}
+
+.canva-dropzone-icon {
+  width: 46px;
+  height: 46px;
+  background: #ffffff;
+  color: #0284c7;
+  border-radius: 50%;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 0.5rem;
+  box-shadow: 0 4px 10px rgba(2, 132, 199, 0.12);
+}
+
+.canva-dropzone-title {
+  font-size: 0.95rem;
+  font-weight: 800;
+  color: #0c4a6e;
+  margin-bottom: 0.25rem;
+}
+
+.canva-dropzone-subtitle {
+  font-size: 0.78rem;
+  color: #0284c7;
+  margin-bottom: 0.5rem;
+}
+
+.canva-dropzone-formats {
+  font-size: 0.74rem;
+  color: #64748b;
+  display: inline-block;
+  background: #ffffff;
+  padding: 0.3rem 0.85rem;
+  border-radius: 999px;
+  border: 1px solid #bae6fd;
+}
+
+/* Live Selected Files Matcher Preview */
+.canva-selected-box {
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 1rem;
+  padding: 1.25rem;
+  margin-bottom: 1.25rem;
+  display: none;
+}
+
+.canva-selected-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 0.85rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 1px solid #f1f5f9;
+}
+
+.canva-file-list {
+  max-height: 220px;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.canva-file-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.55rem 0.85rem;
+  background: #f8fafc;
+  border: 1px solid #e2e8f0;
+  border-radius: 0.5rem;
+  font-size: 0.8rem;
+}
+
+.canva-match-badge-success {
+  background: #dcfce7;
+  color: #15803d;
+  font-size: 0.72rem;
+  font-weight: 700;
+  padding: 0.2rem 0.6rem;
+  border-radius: 999px;
+  border: 1px solid #a7f3d0;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.3rem;
+}
+
+.canva-match-badge-warning {
+  background: #fef3c7;
+  color: #b45309;
+  font-size: 0.72rem;
+  font-weight: 700;
+  padding: 0.2rem 0.6rem;
+  border-radius: 999px;
+  border: 1px solid #fde68a;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.3rem;
+}
+
+/* Submit Canva Button */
+.btn-submit-canva {
+  width: 100%;
+  background: #006aa7;
+  color: #ffffff;
+  border: none;
+  border-radius: 0.65rem;
+  padding: 0.9rem 1.5rem;
+  font-size: 0.9rem;
+  font-weight: 800;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  font-family: inherit;
+}
+
+.btn-submit-canva:hover {
+  background: #005080;
+  box-shadow: 0 6px 18px rgba(0, 106, 167, 0.25);
+}

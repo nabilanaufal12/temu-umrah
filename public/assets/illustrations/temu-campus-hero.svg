@@ -1,0 +1,92 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 620" role="img" aria-labelledby="title desc">
+  <title id="title">Ilustrasi kegiatan mahasiswa di kampus maritim</title>
+  <desc id="desc">Gedung kampus di tepi laut, bukit hijau, perahu, dan mahasiswa yang sedang berkegiatan.</desc>
+
+  <g fill="#fff" opacity=".92">
+    <path d="M100 155c18-27 48-31 68-9 19-18 54-7 57 20 26-1 41 12 41 30H72c0-20 10-36 28-41Z"/>
+    <path d="M888 114c17-24 45-28 64-8 18-16 48-6 51 18 24-1 37 11 37 28H864c0-18 9-32 24-38Z"/>
+    <path d="M1015 250c11-17 32-19 44-5 12-11 31-4 33 12 16 0 25 8 25 19h-112c0-12 4-21 10-26Z" opacity=".55"/>
+  </g>
+
+  <circle cx="1050" cy="88" r="35" fill="#FFE38A" opacity=".88"/>
+  <g fill="none" stroke="#fff" stroke-linecap="round" opacity=".28">
+    <path d="M118 68h82" stroke-width="4"/>
+    <path d="M940 176h98" stroke-width="4"/>
+    <path d="M1030 180h35" stroke-width="3"/>
+  </g>
+
+  <path d="M0 372c102-74 188-87 288-34 79 42 134 31 217-22 95-61 163-63 253-3 80 53 145 54 230 5 90-52 142-36 212 8v294H0Z" fill="#477B65"/>
+  <path d="M0 417c87-57 170-68 255-27 75 37 131 49 225-5 91-53 156-57 246-5 92 53 153 60 238 12 83-48 161-44 236 6v222H0Z" fill="#28584F"/>
+  <path d="M0 488c99-46 183-29 257 12 81 45 152 42 235-2 89-48 172-48 255 3 79 48 152 51 235 8 71-37 147-40 218-8v119H0Z" fill="#123E42"/>
+
+  <path d="M0 501c164 20 306 17 445-9 178-34 323-34 496 2 92 19 179 21 259 7v119H0Z" fill="#2A9BB0" opacity=".92"/>
+  <path d="M0 554c153 18 286 17 423-6 170-28 331-29 497 5 98 20 191 22 280 8v59H0Z" fill="#16798D"/>
+  <g fill="none" stroke="#A6E9E5" stroke-linecap="round" opacity=".65">
+    <path d="M48 553c45 12 88 11 132-1" stroke-width="4"/>
+    <path d="M210 584c44 10 88 9 130-1" stroke-width="3"/>
+    <path d="M908 548c50 10 96 9 143-2" stroke-width="4"/>
+    <path d="M1012 584c30 6 59 6 88-1" stroke-width="3"/>
+  </g>
+
+  <!-- campus building -->
+  <g transform="translate(438 282)">
+    <path d="M10 92 146 28l142 64v130H10Z" fill="#F6E7C1"/>
+    <path d="m0 95 147-72 151 72-12 25-139-66L12 120Z" fill="#F3B95C"/>
+    <path d="M121 50h52v44h-52Z" fill="#D97845"/>
+    <path d="M128 56h38v38h-38Z" fill="#BDE8E7"/>
+    <g fill="#357F8A">
+      <path d="M31 129h31v64H31Z"/><path d="M80 129h31v64H80Z"/>
+      <path d="M196 129h31v64h-31Z"/><path d="M245 129h31v64h-31Z"/>
+    </g>
+    <g fill="#9EDBD5">
+      <path d="M39 137h15v22H39Z"/><path d="M88 137h15v22H88Z"/>
+      <path d="M204 137h15v22h-15Z"/><path d="M253 137h15v22h-15Z"/>
+    </g>
+    <path d="M126 194h43v28h-43Z" fill="#174B56"/>
+    <path d="M119 222h57" stroke="#F3B95C" stroke-width="8" stroke-linecap="round"/>
+    <path d="M-12 224h322" stroke="#163F45" stroke-width="9" stroke-linecap="round"/>
+    <path d="M-6 232h312" stroke="#8FD9D0" stroke-width="4" stroke-linecap="round"/>
+  </g>
+
+  <!-- lighthouse and sailboat -->
+  <g transform="translate(795 291)">
+    <path d="m18 198 13-122h43l13 122Z" fill="#F8F0D7"/>
+    <path d="M22 93h61l-8-27H30Z" fill="#E77B58"/>
+    <path d="M34 62h37V45H34Z" fill="#174B56"/>
+    <path d="M26 113h48" stroke="#E77B58" stroke-width="8"/>
+    <path d="M26 151h48" stroke="#E77B58" stroke-width="8"/>
+    <path d="M52 45V8" stroke="#F8F0D7" stroke-width="4"/>
+    <path d="M52 8h28" stroke="#F8F0D7" stroke-width="3"/>
+  </g>
+  <g transform="translate(954 439)">
+    <path d="M0 54h142l-18 22H22Z" fill="#E47B4E"/>
+    <path d="M26 53 82 10l38 43Z" fill="#F5D37A"/>
+    <path d="M80 12v42" stroke="#174B56" stroke-width="4"/>
+    <path d="M82 15 45 48h37Z" fill="#F8F0D7"/>
+    <path d="M130 76c18 3 30 2 43-3" fill="none" stroke="#A6E9E5" stroke-width="4" stroke-linecap="round"/>
+  </g>
+
+  <!-- foreground students -->
+  <g transform="translate(246 405)">
+    <circle cx="39" cy="21" r="16" fill="#AA6648"/>
+    <path d="M18 69c5-29 44-31 52 0l8 69H9Z" fill="#F0B84C"/>
+    <path d="M27 73 1 108l16 10 28-35Z" fill="#F7DFA7"/>
+    <path d="M61 70 95 99l-13 16-35-30Z" fill="#F7DFA7"/>
+    <path d="M28 136 17 204M62 136l18 67" stroke="#173F49" stroke-width="12" stroke-linecap="round"/>
+    <path d="M10 205h25M72 205h27" stroke="#173F49" stroke-width="8" stroke-linecap="round"/>
+    <path d="M28 7c12-17 35-15 45 2-16-3-28 1-45 10Z" fill="#174B56"/>
+  </g>
+  <g transform="translate(101 443) scale(.78)">
+    <circle cx="39" cy="21" r="16" fill="#8E583F"/>
+    <path d="M18 69c5-29 44-31 52 0l8 69H9Z" fill="#63C2BE"/>
+    <path d="M27 73 1 108l16 10 28-35ZM61 70l34 29-13 16-35-30Z" fill="#F7DFA7"/>
+    <path d="M28 136 17 204M62 136l18 67" stroke="#173F49" stroke-width="12" stroke-linecap="round"/>
+    <path d="M10 205h25M72 205h27" stroke="#173F49" stroke-width="8" stroke-linecap="round"/>
+    <path d="M25 8c13-17 37-13 46 4-17-3-30 0-46 9Z" fill="#D97845"/>
+  </g>
+
+  <g fill="#F3B95C" opacity=".85">
+    <circle cx="91" cy="398" r="5"/><circle cx="108" cy="384" r="3"/><circle cx="355" cy="372" r="5"/>
+    <circle cx="875" cy="385" r="4"/><circle cx="1110" cy="416" r="5"/>
+  </g>
+</svg>
